@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://emmo.info/application/myontology#"
+     xml:base="http://emmo.info/application/myontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:annotations="http://emmo.info/emmo/top/annotations#">
+    <owl:Ontology rdf:about="http://emmo.info/application/myontology">
+        <owl:imports rdf:resource="http://emmo.info/emmo/marketplace-1.0.1"/>
+        <dcterms:title>My ontology</dcterms:title>
+        <dcterms:abstract>My ontology short description</dcterms:abstract>
+        <dcterms:contributor>Contributors name and affiliation</dcterms:contributor>
+        <dcterms:license>Creative Commons BY 4.0</dcterms:license>
+    </owl:Ontology>
+
+</rdf:RDF>
