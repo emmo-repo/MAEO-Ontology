@@ -8,8 +8,7 @@ Experts Ontology is built on top of EMMO and some of its modules. The following 
 
 | Imported Ontologies | Version           |
 | ------------------- | ----------------- |
-| EMMO                | marketplace-1.0.1 |
-| Mechanical Testing  | 1.0.0             |
+| EMMO                | 1.0.0-alpha2      |
 
 ## Attribution and Credits
 
