@@ -1,10 +1,10 @@
-# My Ontology
+# MarketPlace Experts Ontology
 
-My description of my ontology.
+Materials Modelling Experts and Expertise Ontology
 
 ## Requirements
 
-My ontology is built on top of EMMO and some of its modules. The following table describes the version compatibility between those ontologies:
+Experts Ontology is built on top of EMMO and some of its modules. The following table describes the version compatibility between those ontologies:
 
 | Imported Ontologies | Version           |
 | ------------------- | ----------------- |
@@ -14,12 +14,13 @@ My ontology is built on top of EMMO and some of its modules. The following table
 ## Attribution and Credits
 
 ### Authors
-My name, MyCompany Inc, MyCity, My e-mail
+Daniele Toti, Goldbeck Consulting Ltd, Cambridge, UK, daniele@goldbeck-consulting.com
+Gerhard Goldbeck, Goldbeck Consulting Ltd, Cambridge, UK, gerhard@goldbeck-consulting.com
+Alexandra Simperler, Goldbeck Consulting Ltd, Cambridge, UK, alex@goldbeck-consulting.com
 
 ### Project
-- My project name; Grant agreement number: xxxx ; Logo
 - [MarketPlace](https://www.the-marketplace-project.eu/); Grant agreement number: 760173   <img src="https://www.the-marketplace-project.eu/content/dam/iwm/the-marketplace-project/images/MARKETPLACE_LOGO_300dpi.png"  width="120">
 
 ## License
 
-My ontology is released under a Creative Commons license Attribution 4.0 International (CC BY 4.0). See [here](https://creativecommons.org/licenses/by/4.0/legalcode) for more information.
+MarketPlace Experts Ontology is released under a Creative Commons license Attribution 4.0 International (CC BY 4.0). See [here](https://creativecommons.org/licenses/by/4.0/legalcode) for more information.
