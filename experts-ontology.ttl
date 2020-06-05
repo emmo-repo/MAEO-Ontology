@@ -5,27 +5,51 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://emmo.info/emmo/application/experts#Expert> a owl:Class , <http://emmo.info/emmo/top/physical#EMMO_c5ddfdba_c074_4aa4_ad6b_1ac4942d300d> ;
-   rdfs:label "Expert" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
-<http://emmo.info/emmo/application/experts#Expertise> a owl:Class , <http://emmo.info/emmo/middle/properties#EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8> ;
-   rdfs:label "Expertise" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+<http://emmo.info/emmo/application/experts#ExpertsOntology> a owl:Class .
+<http://emmo.info/emmo/application/experts#Expert> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> , <http://emmo.info/emmo/top/physical#Physical> ;
+   rdfs:label "Expert" .
+<http://emmo.info/emmo/application/experts#ExpertSubjectiveProperty> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> , <http://emmo.info/emmo/middle/properties#SubjectiveProperty> ;
+   rdfs:label "ExpertSubjectiveProperty" .
+<http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> , <http://emmo.info/emmo/middle/properties#ObjectiveProperty> ;
+   rdfs:label "ExpertObjectiveProperty" .
+<http://emmo.info/emmo/application/experts#Expertise> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertSubjectiveProperty> ;
+   rdfs:label "Expertise" .
 <http://emmo.info/emmo/application/experts#hasExpertise> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
-   rdfs:range <http://emmo.info/emmo/application/experts#Expertise> .
+   rdfs:range <http://emmo.info/emmo/application/experts#Expertise> , <http://emmo.info/emmo/middle/semiotics#Sign> .
+<http://emmo.info/emmo/application/experts#isRelatedTo> a owl:ObjectProperty ;
+   rdfs:domain <http://emmo.info/emmo/application/experts#Expertise> .
 <http://emmo.info/emmo/application/experts#yearsOnMarketPlace> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range xsd:double .
 <http://emmo.info/emmo/application/experts#experienceInYears> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range xsd:double .
+<http://emmo.info/emmo/application/experts#PersonalDetail> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> ;
+   rdfs:label "PersonalDetail" .
+<http://emmo.info/emmo/application/experts#OrganizationalDetail> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> ;
+   rdfs:label "OrganizationalDetail" .
+<http://emmo.info/emmo/application/experts#CertificationDetail> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> ;
+   rdfs:label "CertificationDetail" .
+<http://emmo.info/emmo/application/experts#ProfessionalDetail> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> ;
+   rdfs:label "ProfessionalDetail" .
+<http://emmo.info/emmo/application/experts#ContractualDetail> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> ;
+   rdfs:label "ContractualDetail" .
 <http://emmo.info/emmo/application/experts#Organization> a owl:Class ;
-   rdfs:label "Organization" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#OrganizationalDetail> ;
+   rdfs:label "Organization" .
 <http://emmo.info/emmo/application/experts#Location> a owl:Class ;
-   rdfs:label "Location" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#OrganizationalDetail> ;
+   rdfs:label "Location" .
 <http://emmo.info/emmo/application/experts#address> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Location> ;
    rdfs:range xsd:string .
@@ -35,9 +59,9 @@
 <http://emmo.info/emmo/application/experts#worksAt> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Organization> .
-<http://emmo.info/emmo/application/experts#Language> a owl:Class , <http://emmo.info/emmo/middle/properties#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
-   rdfs:label "Language" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+<http://emmo.info/emmo/application/experts#Language> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ProfessionalDetail> ;
+   rdfs:label "Language" .
 <http://emmo.info/emmo/application/experts#languageCode> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Language> ;
    rdfs:range xsd:string .
@@ -53,15 +77,15 @@
 <http://emmo.info/emmo/application/experts#languageLevel> a owl:DatatypeProperty ;
    rdfs:domain rdf:Statement ;
    rdfs:range xsd:string .
-<http://emmo.info/emmo/application/experts#DailyRate> a owl:Class , <http://emmo.info/emmo/middle/properties#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
-   rdfs:label "DailyRate" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+<http://emmo.info/emmo/application/experts#DailyRate> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ProfessionalDetail> ;
+   rdfs:label "DailyRate" .
 <http://emmo.info/emmo/application/experts#requests> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#DailyRate> .
 <http://emmo.info/emmo/application/experts#Remuneration> a owl:Class ;
-   rdfs:label "ExternalProfile" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ProfessionalDetail> ;
+   rdfs:label "ExternalProfile" .
 <http://emmo.info/emmo/application/experts#amountsTo> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#DailyRate> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Remuneration> .
@@ -71,15 +95,15 @@
 <http://emmo.info/emmo/application/experts#remunerationValue> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Remuneration> ;
    rdfs:range xsd:double .
-<http://emmo.info/emmo/application/experts#Certification> a owl:Class , <http://emmo.info/emmo/middle/properties#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
-   rdfs:label "Certification" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+<http://emmo.info/emmo/application/experts#Certification> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#CertificationDetail> ;
+   rdfs:label "Certification" .
 <http://emmo.info/emmo/application/experts#hasCertification> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Certification> .
-<http://emmo.info/emmo/application/experts#CertificationAuthority> a owl:Class , <http://emmo.info/emmo/middle/properties#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
-   rdfs:label "CertificationAuthority" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+<http://emmo.info/emmo/application/experts#CertificationAuthority> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#CertificationDetail> ;
+   rdfs:label "CertificationAuthority" .
 <http://emmo.info/emmo/application/experts#issuedBy> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Certification> ;
    rdfs:range <http://emmo.info/emmo/application/experts#CertificationAuthority> .
@@ -92,9 +116,9 @@
 <http://emmo.info/emmo/application/experts#certificationAuthorityName> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#CertificationAuthority> ;
    rdfs:range xsd:string .
-<http://emmo.info/emmo/application/experts#ExternalProfile> a owl:Class , <http://emmo.info/emmo/middle/properties#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
-   rdfs:label "ExternalProfile" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+<http://emmo.info/emmo/application/experts#ExternalProfile> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#PersonalDetail> ;
+   rdfs:label "ExternalProfile" .
 <http://emmo.info/emmo/application/experts#hasExternalProfile> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#ExternalProfile> .
@@ -104,9 +128,9 @@
 <http://emmo.info/emmo/application/experts#externalProfileUrl> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#ExternalProfile> ;
    rdfs:range xsd:string .
-<http://emmo.info/emmo/application/experts#Contract> a owl:Class , <http://emmo.info/emmo/middle/properties#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ;
-   rdfs:label "ExternalProfile" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertsOntology> .
+<http://emmo.info/emmo/application/experts#Contract> a owl:Class ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#ContractualDetail> ;
+   rdfs:label "ExternalProfile" .
 <http://emmo.info/emmo/application/experts#isUnderContract> a owl:ObjectProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Contract> .
@@ -119,4 +143,3 @@
 <http://emmo.info/emmo/application/experts#contractConstraint> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Contract> ;
    rdfs:range xsd:string .
-<http://emmo.info/emmo/application/experts#ExpertsOntology> a owl:Class .
