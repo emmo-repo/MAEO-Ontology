@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://materials-marketplace.eu/ontologies/user-management#"
+     xml:base="http://materials-marketplace.eu/ontologies/user-management"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:user-management="http://materials-marketplace.eu/ontologies/user-management#">
+    <owl:Ontology rdf:about="http://materials-marketplace.eu/ontologies/user-management">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://materials-marketplace.eu/ontologies/user-management#country -->
+
+    <owl:ObjectProperty rdf:about="http://materials-marketplace.eu/ontologies/user-management#country">
+        <rdfs:domain rdf:resource="http://materials-marketplace.eu/ontologies/user-management#UserProfile"/>
+        <rdfs:range rdf:resource="http://materials-marketplace.eu/ontologies/user-management#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://materials-marketplace.eu/ontologies/user-management#person -->
+
+    <owl:ObjectProperty rdf:about="http://materials-marketplace.eu/ontologies/user-management#person">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://materials-marketplace.eu/ontologies/user-management#UserProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://materials-marketplace.eu/ontologies/user-management#userID -->
+
+    <owl:ObjectProperty rdf:about="http://materials-marketplace.eu/ontologies/user-management#userID">
+        <rdfs:domain rdf:resource="http://materials-marketplace.eu/ontologies/user-management#UserProfile"/>
+        <rdfs:range rdf:resource="http://materials-marketplace.eu/ontologies/user-management#UserID"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://materials-marketplace.eu/ontologies/user-management#Country -->
+
+    <owl:Class rdf:about="http://materials-marketplace.eu/ontologies/user-management#Country">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://materials-marketplace.eu/ontologies/user-management#UserID -->
+
+    <owl:Class rdf:about="http://materials-marketplace.eu/ontologies/user-management#UserID"/>
+    
+
+
+    <!-- http://materials-marketplace.eu/ontologies/user-management#UserProfile -->
+
+    <owl:Class rdf:about="http://materials-marketplace.eu/ontologies/user-management#UserProfile">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/member"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://materials-marketplace.eu/ontologies/user-management#country"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://materials-marketplace.eu/ontologies/user-management#Country"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://materials-marketplace.eu/ontologies/user-management#person"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://materials-marketplace.eu/ontologies/user-management#userID"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://materials-marketplace.eu/ontologies/user-management#UserID"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
