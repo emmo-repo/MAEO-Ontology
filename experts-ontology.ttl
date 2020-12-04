@@ -10,10 +10,10 @@
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf <http://emmo.info/emmo/top/physical#Physical> .
 <http://emmo.info/emmo/application/experts#MarketPlaceAgent> a owl:Class ;
    rdfs:label "MarketPlace Agent" ;
-   rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgentOntology> , <http://xmlns.com/foaf/0.1/Agent> , <http://emmo.info/emmo/top/physical#Physical> .
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgentOntology> , <http://xmlns.com/foaf/0.1/Agent> .
 <http://emmo.info/emmo/application/experts#User> a owl:Class ;
    rdfs:label "User" ;
-   rdfs:subClassOf <http://xmlns.com/foaf/0.1/MarketPlaceAgent> .
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgent> .
 <http://emmo.info/emmo/application/experts#KnowledgeProvider> a owl:Class ;
    rdfs:label "Knowledge Provider" ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgent> .
@@ -139,6 +139,24 @@
    rdfs:range xsd:date .
 <http://emmo.info/emmo/application/experts#certificationAuthorityName> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#CertificationAuthority> ;
+   rdfs:range xsd:string .
+<http://emmo.info/emmo/application/experts#Profile> a owl:Class ;
+   rdfs:label "Profile" ;
+   rdfs:subClassOf <http://emmo.info/emmo/application/experts#PersonalDetail> .
+<http://emmo.info/emmo/application/experts#hasProfile> a owl:ObjectProperty ;
+   rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
+   rdfs:range <http://emmo.info/emmo/application/experts#Profile> .
+<http://emmo.info/emmo/application/experts#profileName> a owl:DatatypeProperty ;
+   rdfs:domain <http://emmo.info/emmo/application/experts#Profile> ;
+   rdfs:range xsd:string .
+<http://emmo.info/emmo/application/experts#profileAddress> a owl:DatatypeProperty ;
+   rdfs:domain <http://emmo.info/emmo/application/experts#Profile> ;
+   rdfs:range xsd:string .
+<http://emmo.info/emmo/application/experts#profileEmail> a owl:DatatypeProperty ;
+   rdfs:domain <http://emmo.info/emmo/application/experts#Profile> ;
+   rdfs:range xsd:string .
+<http://emmo.info/emmo/application/experts#profileUsername> a owl:DatatypeProperty ;
+   rdfs:domain <http://emmo.info/emmo/application/experts#Profile> ;
    rdfs:range xsd:string .
 <http://emmo.info/emmo/application/experts#ExternalProfile> a owl:Class ;
    rdfs:label "ExternalProfile" ;
