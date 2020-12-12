@@ -6,42 +6,57 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://emmo.info/emmo/application/experts#MarketPlaceAgentOntology> a owl:Class ;
-   rdfs:label "MarketPlace Agent Ontology" .
+   rdfs:label "MarketPlace Agent Ontology" ;
+   rdfs:comment "This is the root class of the MPAO ontology, introduced for providing the ontology itself with a tree-like structure, with all of its other explicitly defined internal classes being subclasses of this class at various hierarchical levels." .
 <http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf <http://emmo.info/emmo/top/physical#Physical> .
 <http://emmo.info/emmo/application/experts#MarketPlaceAgent> a owl:Class ;
    rdfs:label "MarketPlace Agent" ;
+   rdfs:comment "It models a generic Agent in the MarketPlace, i.e. an entity that can act on the MarketPlace" ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgentOntology> , <http://xmlns.com/foaf/0.1/Agent> .
 <http://emmo.info/emmo/application/experts#User> a owl:Class ;
    rdfs:label "User" ;
+   rdfs:comment "It has been introduced in order to model a generic user of the MarketPlace application and interconnect (in the near future) MPAO with the User Ontology that is currently under development on MarketPlace." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgent> .
 <http://emmo.info/emmo/application/experts#KnowledgeProvider> a owl:Class ;
    rdfs:label "Knowledge Provider" ;
+   rdfs:comment "It models a generic provider of knowledge that possesses a certain expertise." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgent> .
 <http://emmo.info/emmo/application/experts#Expert> a owl:Class ;
    rdfs:label "Expert" ;
+   rdfs:comment "A knowledge-providing human expert that possesses a certain expertise and whose information can be stored and accessed within the MarketPlace application. It sports datatype properties like experienceInYears and yearsOnMarketPlace, and it is the domain of several object properties." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#KnowledgeProvider> , <http://xmlns.com/foaf/0.1/Person> .
 <http://emmo.info/emmo/application/experts#Organization> a owl:Class ;
    rdfs:label "Knowledge-providing Organization" ;
+   rdfs:comment "A knowledge-providing juridical entity that possesses a certain expertise, and may or may not have something to do with Experts" ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#KnowledgeProvider> .
 <http://emmo.info/emmo/application/experts#Team> a owl:Class ;
    rdfs:label "Knowledge-providing Team" ;
+   rdfs:comment "A knowledge-providing group of people." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#KnowledgeProvider> .
 <http://emmo.info/emmo/application/experts#Lab> a owl:Class ;
    rdfs:label "Knowledge-providing Lab" ;
+   rdfs:comment "a knowledge-providing laboratory." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#KnowledgeProvider> .
 <http://emmo.info/emmo/application/experts#ExpertSubjectiveProperty> a owl:Class ;
    rdfs:label "ExpertSubjectiveProperty" ;
+   rdfs:comment "It is meant to represent the superclass of subjective properties that may be possessed by entities modeled in the MPAO ontology." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgentOntology> , <http://emmo.info/emmo/middle/properties#SubjectiveProperty> .
 <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> a owl:Class ;
    rdfs:label "ExpertObjectiveProperty" ;
+   rdfs:comment "It is meant to represent the superclass of all of the objective properties potentially possessed by the entities of the MPAO ontology." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#MarketPlaceAgentOntology> , <http://emmo.info/emmo/middle/properties#ObjectiveProperty> .
 <http://emmo.info/emmo/application/experts#Expertise> a owl:Class ;
    rdfs:label "Expertise" ;
+   rdfs:comment "It represents the expertise possessed by a generic knowledge provider, by which users of the MarketPlace application can look for experts and such (and vice versa)." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertSubjectiveProperty> .
+<http://emmo.info/emmo/application/experts#mpaoObjectProperty> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/middle/properties#hasProperty> .
 <http://emmo.info/emmo/application/experts#hasExpertise> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#KnowledgeProvider> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Expertise> .
 <http://emmo.info/emmo/application/experts#isRelatedTo> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expertise> ;
    rdfs:range <http://emmo.info/emmo/middle/semiotics#Sign> .
 <http://emmo.info/emmo/application/experts#yearsOnMarketPlace> a owl:DatatypeProperty ;
@@ -52,39 +67,50 @@
    rdfs:range xsd:double .
 <http://emmo.info/emmo/application/experts#PersonalDetail> a owl:Class ;
    rdfs:label "PersonalDetail" ;
+   rdfs:comment "It models the personal details (name, address, contacts, etc.) of a human expert." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> .
 <http://emmo.info/emmo/application/experts#OrganizationalDetail> a owl:Class ;
    rdfs:label "OrganizationalDetail" ;
+   rdfs:comment "It is meant to model the details of the company, institution, organization an expert may be working at/with." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> .
 <http://emmo.info/emmo/application/experts#CertificationDetail> a owl:Class ;
    rdfs:label "CertificationDetail" ;
+   rdfs:comment "It is meant to describe the details of certifications possessed by a human expert." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> .
 <http://emmo.info/emmo/application/experts#ProfessionalDetail> a owl:Class ;
    rdfs:label "ProfessionalDetail" ;
+   rdfs:comment "It is meant to encompass the professional details of a human expert, e.g. title, role, qualifications, languages spoken, current or desired daily rate for hiring and its corresponding remuneration, etc." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> .
 <http://emmo.info/emmo/application/experts#ContractualDetail> a owl:Class ;
    rdfs:label "ContractualDetail" ;
+   rdfs:comment "It describes the details about the contract a human experts is currently under." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ExpertObjectiveProperty> .
 <http://emmo.info/emmo/application/experts#ExpertOrganization> a owl:Class ;
    rdfs:label "Expert Organization" ;
+   rdfs:comment "It models the organization an expert may be working at/with, distinguishing it from a knowledge-providing organization. An instance of the former may also be the same organization as an instance of the latter; in order to model such a case, the object property refersToOrganizationWithExpertise (domain: ExpertOrganization, range: Organization) has been introduced for connecting the two." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#OrganizationalDetail> .
 <http://emmo.info/emmo/application/experts#Location> a owl:Class ;
    rdfs:label "Location" ;
+   rdfs:comment "It describes the physical address of an organization." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#OrganizationalDetail> .
 <http://emmo.info/emmo/application/experts#address> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Location> ;
    rdfs:range xsd:string .
 <http://emmo.info/emmo/application/experts#isLocatedAt> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#ExpertOrganization> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Location> .
 <http://emmo.info/emmo/application/experts#worksAt> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#ExpertOrganization> .
 <http://emmo.info/emmo/application/experts#refersToOrganizationWithExpertise> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#ExpertOrganization> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Organization> .
 <http://emmo.info/emmo/application/experts#Language> a owl:Class ;
    rdfs:label "Language" ;
+   rdfs:comment "It describes a language known by a human expert. By reification (via the rdf:Statement construct), the datatype properties languageType and languageLevel are associated with a 'Expert knowsLanguage Language' triple." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ProfessionalDetail> .
 <http://emmo.info/emmo/application/experts#languageCode> a owl:DatatypeProperty ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Language> ;
@@ -93,6 +119,7 @@
    rdfs:domain <http://emmo.info/emmo/application/experts#Language> ;
    rdfs:range xsd:string .
 <http://emmo.info/emmo/application/experts#knowsLanguage> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Language> .
 <http://emmo.info/emmo/application/experts#languageType> a owl:DatatypeProperty ;
@@ -103,14 +130,18 @@
    rdfs:range xsd:string .
 <http://emmo.info/emmo/application/experts#DailyRate> a owl:Class ;
    rdfs:label "DailyRate" ;
+   rdfs:comment "It models the daily rate a human experts requests." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ProfessionalDetail> .
 <http://emmo.info/emmo/application/experts#requests> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#DailyRate> .
 <http://emmo.info/emmo/application/experts#Remuneration> a owl:Class ;
    rdfs:label "Remuneration" ;
+   rdfs:comment "It models the remuneration value and currency of the daily rate requested by a human expert, as well as the one associated with an existing contract a human expert may be under." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ProfessionalDetail> .
 <http://emmo.info/emmo/application/experts#amountsTo> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#DailyRate> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Remuneration> .
 <http://emmo.info/emmo/application/experts#remunerationCurrency> a owl:DatatypeProperty ;
@@ -121,14 +152,18 @@
    rdfs:range xsd:double .
 <http://emmo.info/emmo/application/experts#Certification> a owl:Class ;
    rdfs:label "Certification" ;
+   rdfs:comment "It describes an actual certification a human expert may possess, with datatype properties like certificationTitle and expirationDate." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#CertificationDetail> .
 <http://emmo.info/emmo/application/experts#hasCertification> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Certification> .
 <http://emmo.info/emmo/application/experts#CertificationAuthority> a owl:Class ;
    rdfs:label "CertificationAuthority" ;
+   rdfs:comment "It models the authority that has issued a certification." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#CertificationDetail> .
 <http://emmo.info/emmo/application/experts#issuedBy> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Certification> ;
    rdfs:range <http://emmo.info/emmo/application/experts#CertificationAuthority> .
 <http://emmo.info/emmo/application/experts#expirationDate> a owl:DatatypeProperty ;
@@ -142,8 +177,10 @@
    rdfs:range xsd:string .
 <http://emmo.info/emmo/application/experts#Profile> a owl:Class ;
    rdfs:label "Profile" ;
+   rdfs:comment "It includes the details of a human expert's profile." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#PersonalDetail> .
 <http://emmo.info/emmo/application/experts#hasProfile> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Profile> .
 <http://emmo.info/emmo/application/experts#profileName> a owl:DatatypeProperty ;
@@ -160,8 +197,10 @@
    rdfs:range xsd:string .
 <http://emmo.info/emmo/application/experts#ExternalProfile> a owl:Class ;
    rdfs:label "ExternalProfile" ;
+   rdfs:comment "It represents a connection with an external profile for a given experts, e.g. a social network profile on LinkedIn, Facebook, etc." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#PersonalDetail> .
 <http://emmo.info/emmo/application/experts#hasExternalProfile> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#ExternalProfile> .
 <http://emmo.info/emmo/application/experts#externalProfileName> a owl:DatatypeProperty ;
@@ -172,11 +211,14 @@
    rdfs:range xsd:string .
 <http://emmo.info/emmo/application/experts#Contract> a owl:Class ;
    rdfs:label "Contract" ;
+   rdfs:comment "It is meant to model the actual contract(s) a given expert may be currently under. It includes datatype properties like contractType and contractConstraint, the latter modeling potential legal or business constraints and limitations a contract may specify with regard to potential consulting and collaboration activities an expert may be allowed to carry out." ;
    rdfs:subClassOf <http://emmo.info/emmo/application/experts#ContractualDetail> .
 <http://emmo.info/emmo/application/experts#isUnderContract> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Expert> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Contract> .
 <http://emmo.info/emmo/application/experts#hasRemuneration> a owl:ObjectProperty ;
+   rdfs:subPropertyOf <http://emmo.info/emmo/application/experts#mpaoObjectProperty> ;
    rdfs:domain <http://emmo.info/emmo/application/experts#Contract> ;
    rdfs:range <http://emmo.info/emmo/application/experts#Remuneration> .
 <http://emmo.info/emmo/application/experts#contractType> a owl:DatatypeProperty ;
