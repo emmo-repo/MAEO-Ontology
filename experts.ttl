@@ -343,35 +343,40 @@ experts:contractType a owl:DatatypeProperty ;
    rdfs:domain experts:Contract ;
    rdfs:range xsd:string .
 
+
 experts:contractConstraint a owl:DatatypeProperty ;
    rdfs:subPropertyOf experts:maeoDatatypeProperty ;
    rdfs:domain experts:Contract ;
    rdfs:range xsd:string .
 
+
+### equivalent to CharacterisationMethod when object of expertiseOn
+### equivalent to Manufacturing when object of expertiseOn
+### equivalent to Material when object of expertiseOn
+### equivalent to Model when object of expertiseOn   
    experts:Competence a owl:Class ;
    skos:prefLabel "Competence"@en ;
-   ### equivalent to CharacterisationMethod when object of expertiseOn
-   owl:equivalentClass [rdf:type owl:Restriction ;
+   
+   owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty [ owl:inverseOf experts:expertiseOn ] ;
                         owl:someValuesFrom characterisation-methods:CharacterisationMethod 
                         ] ;
-   ### equivalent to Manufacturing when object of expertiseOn
-   owl:equivalentClass [rdf:type owl:Restriction ;
+
+   owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty [ owl:inverseOf experts:expertiseOn ] ;
                         owl:someValuesFrom manufacturing:EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b 
                         ] ;
-   ### equivalent to Material when object of expertiseOn
-   owl:equivalentClass [rdf:type owl:Restriction ;
+
+   owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty [ owl:inverseOf experts:expertiseOn ] ;
-                        owl:someValuesFrom materials:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 ;
+                        owl:someValuesFrom materials:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 
                         ] ;
-   ### equivalent to Model when object of expertiseOn
-   owl:equivalentClass [rdf:type owl:Restriction ;
+   owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty experts:expertiseOn ;
                         owl:someValuesFrom models:EMMO_939483b1_0148_43d1_8b35_851d2cd5d939 
                         ] ;
    ### equivalent to Software when object of expertiseOn
-   owl:equivalentClass [rdf:type owl:Restriction ;
+   owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty experts:expertiseOn ;
-                        owl:someValuesFrom software:Software
-                        ] ;
+                        owl:someValuesFrom software:Software 
+                        ] .
