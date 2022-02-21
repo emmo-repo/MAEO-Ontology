@@ -19,9 +19,9 @@
         <dc:description>
  To illustrate with examples the creation of a schema of RDF properties
  and classes, but using abstract things for people, rather than strings, etc.
- If you have an "Assistant's phone number", then really you have an assitant who has
+ If you have an "Assistant's phone number", then really you have an assistant who has
  a phone number - and that is much more useful in general.
- For example, when data about you and your assietnt in merged,
+ For example, when data about you and your assistant is merged,
  you will end up with an "assistant's email" and the like.
 </dc:description>
         <dc:description>$Id: contact.rdf,v 1.18 2011/02/01 04:13:21 timbl Exp $</dc:description>

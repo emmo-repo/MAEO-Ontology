@@ -1,14 +1,20 @@
 # MarketPlace Agent and Expert Ontology (MAEO)
 
-Materials Modelling MarketPlace Agent and Expert Ontology
+Materials Modeling MarketPlace Agent and Expert Ontology
 
 ## Requirements
 
-The MAEO Ontology y is built on top of EMMO and some of its modules. The following table describes the version compatibility between those ontologies:
+The MAEO Ontology is built with an alignment with EMMO and some of its modules, as well as with EMMO-compliant domain-level ontologies developed for the Open Innovation Environment (OIE) from the OYSTER project. The following table describes the version compatibility between those ontologies:
 
 | Imported Ontologies | Version           |
 | ------------------- | ----------------- |
-| EMMO                | 1.0.0-beta2      |
+| EMMO                | 1.0.0-beta2       |
+| OIE Charact. methods|                   |
+| OIE Manufacturing   |                   |
+| OIE Materials       |                   |
+| OIE Models          |                   |
+| OIE Software        |                   |
+
 
 ## Attribution and Credits
 

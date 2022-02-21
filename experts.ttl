@@ -82,13 +82,13 @@ experts:Lab a owl:Class ;
 
 ### ExpertSubjectiveProperty as a subclass of emmo:SubjectiveProperty
 experts:ExpertSubjectiveProperty a owl:Class ;
-   skos:prefLabel "ExpertSubjectiveProperty"@en ;
+   skos:prefLabel "Expert Subjective Property"@en ;
    rdfs:comment "It is meant to represent the superclass of subjective properties that may be possessed by entities modeled in the MAEO ontology." ;
    rdfs:subClassOf experts:MarketPlaceAgentExpertOntology , emmo:EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8 .
 
 ### ExpertObjectiveProperty as a subclass of emmo:ObjectProperty
 experts:ExpertObjectiveProperty a owl:Class ;
-   skos:prefLabel "ExpertObjectiveProperty"@en ;
+   skos:prefLabel "Expert Objective Property"@en ;
    rdfs:comment "It is meant to represent the superclass of all of the objective properties potentially possessed by the entities of the MAEO ontology." ;
    rdfs:subClassOf experts:MarketPlaceAgentExpertOntology , emmo:EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978 .
 
@@ -124,27 +124,27 @@ experts:experienceInYears a owl:DatatypeProperty ;
    rdfs:range xsd:double .
 
 experts:PersonalDetail a owl:Class ;
-   skos:prefLabel "PersonalDetail"@en ;
+   skos:prefLabel "Personal Detail"@en ;
    rdfs:comment "It models the personal details (name, address, contacts, etc.) of a human expert." ;
    rdfs:subClassOf experts:ExpertObjectiveProperty .
 
 experts:OrganizationalDetail a owl:Class ;
-   skos:prefLabel "OrganizationalDetail"@en ;
+   skos:prefLabel "Organizational Detail"@en ;
    rdfs:comment "It is meant to model the details of the company, institution, organization an expert may be working at/with." ;
    rdfs:subClassOf experts:ExpertObjectiveProperty .
 
 experts:CertificationDetail a owl:Class ;
-   skos:prefLabel "CertificationDetail"@en ;
+   skos:prefLabel "Certification Detail"@en ;
    rdfs:comment "It is meant to describe the details of certifications possessed by a human expert." ;
    rdfs:subClassOf experts:ExpertObjectiveProperty .
 
 experts:ProfessionalDetail a owl:Class ;
-   skos:prefLabel "ProfessionalDetail"@en ;
+   skos:prefLabel "Professional Detail"@en ;
    rdfs:comment "It is meant to encompass the professional details of a human expert, e.g. title, role, qualifications, languages spoken, current or desired daily rate for hiring and its corresponding remuneration, etc." ;
    rdfs:subClassOf experts:ExpertObjectiveProperty .
 
 experts:ContractualDetail a owl:Class ;
-   skos:prefLabel "ContractualDetail"@en ;
+   skos:prefLabel "Contractual Detail"@en ;
    rdfs:comment "It describes the details about the contract a human experts is currently under." ;
    rdfs:subClassOf experts:ExpertObjectiveProperty .
 
@@ -209,7 +209,7 @@ experts:languageLevel a owl:DatatypeProperty ;
    rdfs:range xsd:string .
 
 experts:DailyRate a owl:Class ;
-   skos:prefLabel "DailyRate"@en ;
+   skos:prefLabel "Daily Rate"@en ;
    rdfs:comment "It models the daily rate a human experts requests." ;
    rdfs:subClassOf experts:ProfessionalDetail .
 
@@ -249,7 +249,7 @@ experts:hasCertification a owl:ObjectProperty ;
    rdfs:range experts:Certification .
 
 experts:CertificationAuthority a owl:Class ;
-   skos:prefLabel "CertificationAuthority"@en ;
+   skos:prefLabel "Certification Authority"@en ;
    rdfs:comment "It models the authority that has issued a certification." ;
    rdfs:subClassOf experts:CertificationDetail .
 
@@ -304,7 +304,7 @@ experts:profileUsername a owl:DatatypeProperty ;
    rdfs:range xsd:string .
 
 experts:ExternalProfile a owl:Class ;
-   skos:prefLabel "ExternalProfile"@en ;
+   skos:prefLabel "External Profile"@en ;
    rdfs:comment "It represents a connection with an external profile for a given experts, e.g. a social network profile on LinkedIn, Facebook, etc." ;
    rdfs:subClassOf experts:PersonalDetail .
 
@@ -343,34 +343,31 @@ experts:contractType a owl:DatatypeProperty ;
    rdfs:domain experts:Contract ;
    rdfs:range xsd:string .
 
-
 experts:contractConstraint a owl:DatatypeProperty ;
    rdfs:subPropertyOf experts:maeoDatatypeProperty ;
    rdfs:domain experts:Contract ;
    rdfs:range xsd:string .
 
-
-### equivalent to CharacterisationMethod when object of expertiseOn
-### equivalent to Manufacturing when object of expertiseOn
-### equivalent to Material when object of expertiseOn
-### equivalent to Model when object of expertiseOn   
-   experts:Competence a owl:Class ;
+experts:Competence a owl:Class ;
    skos:prefLabel "Competence"@en ;
-   
+   rdfs:subClassOf experts:MarketPlaceAgentExpertOntology ;
+   rdfs:comment "" ;
+   ### equivalent to CharacterisationMethod when object of expertiseOn   
    owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty [ owl:inverseOf experts:expertiseOn ] ;
                         owl:someValuesFrom characterisation-methods:CharacterisationMethod 
                         ] ;
-
+   ### equivalent to Manufacturing when object of expertiseOn
    owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty [ owl:inverseOf experts:expertiseOn ] ;
                         owl:someValuesFrom manufacturing:EMMO_a4d66059_5dd3_4b90_b4cb_10960559441b 
                         ] ;
-
+   ### equivalent to Material when object of expertiseOn
    owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty [ owl:inverseOf experts:expertiseOn ] ;
                         owl:someValuesFrom materials:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 
                         ] ;
+   ### equivalent to Model when object of expertiseOn
    owl:equivalentClass [ rdf:type owl:Restriction ;
                         owl:onProperty experts:expertiseOn ;
                         owl:someValuesFrom models:EMMO_939483b1_0148_43d1_8b35_851d2cd5d939 
@@ -380,3 +377,30 @@ experts:contractConstraint a owl:DatatypeProperty ;
                         owl:onProperty experts:expertiseOn ;
                         owl:someValuesFrom software:Software 
                         ] .
+                             
+   ### Sample Individuals 
+   experts:PierluigiDelNostro a experts:Expert .
+   experts:PierluigiDelNostro experts:hasProfile experts:Profile1 .
+   experts:Profile1 a experts:Profile .
+   experts:Profile1 experts:profileName "Pierluigi Del Nostro" .
+   
+   experts:GerhardGoldbeck a experts:Expert .
+   experts:GerhardGoldbeck experts:hasProfile experts:Profile2 .
+   experts:Profile2 a experts:Profile .
+   experts:Profile2 experts:profileName "Gerhard Goldbeck" .
+  
+   materials:ColdPlasma a materials:EMMO_4c21fb86_fdcf_444e_b498_86fe656295af .  
+   software:Gromacs5.1 a software:Gromacs . 
+   
+   experts:Expertise1 a experts:Expertise .
+   experts:Expertise2 a experts:Expertise .
+   experts:Expertise3 a experts:Expertise .
+   
+   experts:PierluigiDelNostro experts:hasExpertise experts:Expertise1 .
+   experts:GerhardGoldbeck experts:hasExpertise experts:Expertise2 .  
+   experts:GerhardGoldbeck experts:hasExpertise experts:Expertise3 .  
+   
+   experts:Expertise1 experts:expertiseOn software:Gromacs5.1 .
+   experts:Expertise2 experts:expertiseOn materials:ColdPlasma .  
+   experts:Expertise3 experts:expertiseOn software:Gromacs5.1 . 
+                                                   
