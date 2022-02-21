@@ -25,7 +25,7 @@ Gerhard Goldbeck, Goldbeck Consulting Ltd, Cambridge, UK, gerhard@goldbeck-consu
 Alexandra Simperler, Goldbeck Consulting Ltd, Cambridge, UK, alex@goldbeck-consulting.com
 
 ### Project
-- [MarketPlace](https://www.the-marketplace-project.eu/); Grant agreement number: 760173   <img src="https://www.the-marketplace-project.eu/content/dam/iwm/the-marketplace-project/images/MARKETPLACE_LOGO_300dpi.png"  width="120">
+- [MarketPlace](https://www.the-marketplace-project.eu/); Grant agreement number: 760173 <img src="https://www.the-marketplace-project.eu/content/dam/iwm/the-marketplace-project/images/MARKETPLACE_LOGO_300dpi.png"  width="120">
 
 ## License
 
