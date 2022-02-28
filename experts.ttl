@@ -38,22 +38,22 @@
                                                         email: gerhard@goldbeck-consulting.com"""@en .
 
 ####### EMMO mapping:
+### Participant                   -> middle-persholistic   emmo:EMMO_13191289_6c2b_4741_93e1_82d53bd0e703
 ### hasProperty                   -> middle-semiotics      emmo:EMMO_e1097637_70d2_4895_973f_2396f04fa204
 ### Objective (property)          -> middle-semiotics      emmo:EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978
 ### Subjective (property)         -> middle-semiotics      emmo:EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8
-### CausalObject/Physical         -> top                   emmo:EMMO_c5ddfdba_c074_4aa4_ad6b_1ac4942d300d
 
 experts:MarketPlaceAgentExpertOntology a owl:Class ;
    skos:prefLabel "MarketPlace Agent and Expert Ontology"@en ;
    rdfs:comment "This is the root class of the MAEO ontology, introduced for providing the ontology itself with a tree-like structure, with all of its other explicitly defined internal classes being subclasses of this class at various hierarchical levels." .
 
-### foaf:Agent as a subclass of emmo:Physical
-foaf:Agent rdfs:subClassOf emmo:EMMO_c5ddfdba_c074_4aa4_ad6b_1ac4942d300d .
+### foaf:Agent as a subclass of emmo:Participant
+foaf:Agent rdfs:subClassOf emmo:EMMO_13191289_6c2b_4741_93e1_82d53bd0e703 .
 
 experts:MarketPlaceAgent a owl:Class ;
    skos:prefLabel "MarketPlace Agent"@en ;
    rdfs:comment "It models a generic Agent in the MarketPlace, i.e. any entity (Knowledge Seeker, Knowledge Provider) that can act on the MarketPlace" ;
-   rdfs:subClassOf experts:MarketPlaceAgentExpertOntology , foaf:Agent .
+   rdfs:subClassOf experts:MarketPlaceAgentExpertOntology, foaf:Agent .
 
 experts:KnowledgeSeeker a owl:Class ;
    skos:prefLabel "Knowledge Seeker"@en ;
@@ -392,19 +392,39 @@ experts:Competence a owl:Class ;
    experts:GerhardGoldbeck experts:hasProfile experts:Profile2 .
    experts:Profile2 a experts:Profile .
    experts:Profile2 experts:profileName "Gerhard Goldbeck" .
-  
-   materials:ColdPlasma a materials:Plasma .  
+   
+   experts:DanieleToti a experts:Expert .
+   experts:DanieleToti experts:hasProfile experts:Profile3 .
+   experts:Profile3 a experts:Profile .
+   experts:Profile3 experts:profileName "Daniele Toti" .
+   
+   experts:English a experts:Language .
+   experts:English experts:languageCode "EN" .
+   experts:English experts:languageName "English" .
+   experts:DanieleToti experts:knowsLanguage experts:English .
+   experts:DTEN a rdf:Statement .
+   experts:DTEN rdf:subject experts:DanieleToti .
+   experts:DTEN rdf:predicate experts:knowsLanguage .
+   experts:DTEN rdf:object experts:English .
+   experts:DTEN experts:languageLevel "C2" .
+   experts:DTEN experts:languageType "Native/Bilingual" .
+     
+   materials:EpoxyMatrixCompositeReinforced a materials:FiberReinforcedComposite .  
    software:Gromacs5.1 a software:Gromacs . 
+   software:MySQL8.0 a software:Database .
    
    experts:Expertise1 a experts:Expertise .
    experts:Expertise2 a experts:Expertise .
    experts:Expertise3 a experts:Expertise .
+   experts:Expertise4 a experts:Expertise .
    
    experts:PierluigiDelNostro experts:hasExpertise experts:Expertise1 .
    experts:GerhardGoldbeck experts:hasExpertise experts:Expertise2 .  
-   experts:GerhardGoldbeck experts:hasExpertise experts:Expertise3 .  
+   experts:GerhardGoldbeck experts:hasExpertise experts:Expertise3 .
+   experts:DanieleToti experts:hasExpertise experts:Expertise4 .
    
    experts:Expertise1 experts:expertiseOn software:Gromacs5.1 .
-   experts:Expertise2 experts:expertiseOn materials:ColdPlasma .  
-   experts:Expertise3 experts:expertiseOn software:Gromacs5.1 . 
+   experts:Expertise2 experts:expertiseOn materials:EpoxyMatrixCompositeReinforced .  
+   experts:Expertise3 experts:expertiseOn software:Gromacs5.1 .
+   experts:Expertise4 experts:expertiseOn software:MySQL8.0 . 
                                                    
