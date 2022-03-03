@@ -15,16 +15,16 @@
 @prefix software: <http://emmo.info/emmo/domain/oie/software#> .
 @base <http://emmo.info/emmo/application/maeo/experts> .
 
-<http://purl.org/maeo/experts> rdf:type owl:Ontology ;
-                                            owl:versionIRI <http://purl.org/maeo/experts> ;
+<http://emmo.info/emmo/application/maeo/experts> rdf:type owl:Ontology ;
+                                            owl:versionIRI <http://emmo.info/emmo/application/maeo/experts> ;
                                             owl:imports <http://xmlns.com/foaf/0.1/> ,
-                                            <http://emmo.info/emmo/1.0.0-beta3/top> ,
-                                            <http://emmo.info/emmo/1.0.0-beta3/middle/semiotics> ,
-                                            <http://emmo.info/emmo/domain/oie/characterisation-methods> ,
-                                            <http://emmo.info/emmo/domain/oie/manufacturing> ,
-                                            <http://emmo.info/emmo/domain/oie/materials> ,
-                                            <http://emmo.info/emmo/domain/oie/models> ,
-                                            <http://emmo.info/emmo/domain/oie/software> ;
+											            <http://emmo.info/emmo/1.0.0-beta3/top> ,
+														<http://emmo.info/emmo/1.0.0-beta3/middle/semiotics> ,
+                                                        <http://emmo.info/emmo/domain/oie/characterisation-methods> ,
+                                                        <http://emmo.info/emmo/domain/oie/manufacturing> ,
+                                                        <http://emmo.info/emmo/domain/oie/materials> ,
+                                                        <http://emmo.info/emmo/domain/oie/models> ,
+                                                        <http://emmo.info/emmo/domain/oie/software> ;
                                             dcterms:abstract ""@en ;
                                             dcterms:description "MAEO - MarketPlace Agent and Expert Ontology" ;
                                             dcterms:title "MAEO - MarketPlace Agent and Expert Ontology"@en ;
@@ -38,15 +38,11 @@
                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "http://emmo.info/emmo/application/maeo/experts" ;
                                             dcterms:publisher "EMMC ASBL" ;
                                             dcterms:bibliographicCitation "Work under review - not available yet" ;
-                                            <http://schema.org/citation> "" ;
-                            				rdfs:comment """Contacts:
+                                            owl:versionInfo "1.0" ;
+                                            rdfs:comment """Contacts:
                                                         Gerhard Goldbeck
                                                         Goldbeck Consulting Ltd (UK)
-                                                        email: gerhard@goldbeck-consulting.com"""@en ;
-                            				#owl:backwardCompatibleWith <http://purl.org/maeo/experts> ;
-                            				#owl:priorVersion <http://purl.org/maeo/experts> ;
-                                            owl:versionInfo "1.0" .
-                                            
+                                                        email: gerhard@goldbeck-consulting.com"""@en .
 
 ####### EMMO mapping:
 ### Participant                   -> middle-persholistic   emmo:EMMO_13191289_6c2b_4741_93e1_82d53bd0e703
