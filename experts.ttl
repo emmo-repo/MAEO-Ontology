@@ -38,6 +38,7 @@
                                             dcterms:bibliographicCitation "Work under review - not available yet" ;
                                             vann:preferredNamespacePrefix "experts" ;
                                             vann:preferredNamespaceUri "http://emmo.info/emmo/application/maeo/experts" ;
+                                            owl:versionInfo "1.0" ;
                                             rdfs:comment """Contacts:
                                                         Gerhard Goldbeck
                                                         Goldbeck Consulting Ltd (UK)
