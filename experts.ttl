@@ -43,8 +43,8 @@
                                                         Gerhard Goldbeck
                                                         Goldbeck Consulting Ltd (UK)
                                                         email: gerhard@goldbeck-consulting.com"""@en ;
-                            				owl:backwardCompatibleWith <http://purl.org/maeo/experts> ;
-                            				owl:priorVersion <http://purl.org/maeo/experts> ;
+                            				#owl:backwardCompatibleWith <http://purl.org/maeo/experts> ;
+                            				#owl:priorVersion <http://purl.org/maeo/experts> ;
                                             owl:versionInfo "1.0" .
                                             
 
