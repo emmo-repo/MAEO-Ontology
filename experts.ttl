@@ -131,6 +131,8 @@ experts:Expertise a owl:Class ;
 
 ### maeoObjectProperty as a subclass of emmo:hasProperty
 experts:maeoObjectProperty a owl:ObjectProperty ;  
+   rdfs:label "maeoObjectProperty" ;
+   rdfs:comment "" ;
    rdfs:subPropertyOf emmo:EMMO_e1097637_70d2_4895_973f_2396f04fa204 .
 
 experts:maeoDatatypeProperty a owl:DatatypeProperty ;
