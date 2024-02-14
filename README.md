@@ -19,10 +19,10 @@ The MAEO Ontology is built with an alignment with EMMO and some of its modules, 
 ## Attribution and Credits
 
 ### Authors
-Daniele Toti, Goldbeck Consulting Ltd, Cambridge, UK, daniele@goldbeck-consulting.com
-Pierluigi Del Nostro, Goldbeck Consulting Ltd, Cambridge, UK, pierluigi@goldbeck-consulting.com
-Gerhard Goldbeck, Goldbeck Consulting Ltd, Cambridge, UK, gerhard@goldbeck-consulting.com
-Alexandra Simperler, Goldbeck Consulting Ltd, Cambridge, UK, alex@goldbeck-consulting.com
+- Pierluigi Del Nostro, Goldbeck Consulting Ltd, Cambridge, UK, pierluigi@goldbeck-consulting.com
+- Gerhard Goldbeck, Goldbeck Consulting Ltd, Cambridge, UK, gerhard@goldbeck-consulting.com
+- Alexandra Simperler, Goldbeck Consulting Ltd, Cambridge, UK, alex@goldbeck-consulting.com
+- Daniele Toti, Goldbeck Consulting Ltd, Cambridge, UK, daniele@goldbeck-consulting.com
 
 ### Project
 - [MarketPlace](https://www.the-marketplace-project.eu/); Grant agreement number: 760173 <img src="https://www.the-marketplace-project.eu/content/dam/iwm/the-marketplace-project/images/MARKETPLACE_LOGO_300dpi.png"  width="120">
