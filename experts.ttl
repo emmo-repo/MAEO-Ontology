@@ -1,4 +1,4 @@
-@prefix : <http://emmo.info/emmo/application/maeo/experts#> .
+@prefix : <http://w3id.org/emmo-maeo/maeo#> .
 @prefix emmo: <http://emmo.info/emmo#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,16 +7,16 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix experts: <http://emmo.info/emmo/application/maeo/experts#> .
+@prefix experts: <http://w3id.org/emmo-maeo/maeo#> .
 @prefix characterisation-methods: <http://emmo.info/emmo/domain/oie/characterisation-methods#> .
 @prefix manufacturing: <http://emmo.info/emmo/domain/oie/manufacturing#> .
 @prefix materials: <http://emmo.info/emmo/domain/oie/materials#> .
 @prefix models: <http://emmo.info/emmo/domain/oie/models#> .
 @prefix software: <http://emmo.info/emmo/domain/oie/software#> .
-@base <http://emmo.info/emmo/application/maeo/experts> .
+@base <http://w3id.org/emmo-maeo/maeo> .
 
-<http://emmo.info/emmo/application/maeo/experts> rdf:type owl:Ontology ;
-	owl:versionIRI <http://emmo.info/emmo/application/maeo/experts> ;
+<http://w3id.org/emmo-maeo/maeo> rdf:type owl:Ontology ;
+	owl:versionIRI <http://w3id.org/emmo-maeo/1.0.0-beta1/maeo> ;
 	owl:imports <http://xmlns.com/foaf/0.1/> ,
 				<http://emmo.info/emmo/1.0.0-beta3/top> ,
 				<http://emmo.info/emmo/1.0.0-beta3/middle/semiotics> ,
@@ -40,7 +40,7 @@
 	dcterms:source "" ;
 	dcterms:issued "" ;
 	<http://purl.org/vocab/vann/preferredNamespacePrefix> "experts"@en ;
-	<http://purl.org/vocab/vann/preferredNamespaceUri> "http://emmo.info/emmo/application/maeo/experts" ;
+	<http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/emmo-maeo/maeo" ;
 	rdfs:comment """Contacts:
 	Gerhard Goldbeck
 	Goldbeck Consulting Ltd (UK)
