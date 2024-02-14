@@ -1,0 +1,673 @@
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#versionIRI> <http://emmo.info/emmo/application/maeo/experts> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://emmo.info/emmo/1.0.0-beta3/top> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://emmo.info/emmo/1.0.0-beta3/middle/semiotics> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://emmo.info/emmo/domain/oie/characterisation-methods> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://emmo.info/emmo/domain/oie/manufacturing> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://emmo.info/emmo/domain/oie/materials> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://emmo.info/emmo/domain/oie/models> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://emmo.info/emmo/domain/oie/software> .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/abstract> ""@en .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/bibliographicCitation> "Work under review - not available yet" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/contributor> "Goldbeck Consulting Ltd (UK)" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/created> "2022-03-03" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/creator> "Daniele Toti" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/creator> "Gerhard Goldbeck" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/creator> "Pierluigi Del Nostro" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/description> "MAEO - MarketPlace Agent and Expert Ontology" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/issued> "" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/modified> "" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/publisher> "EMMC ASBL" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/source> "" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/dc/terms/title> "MAEO - MarketPlace Agent and Expert Ontology"@en .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/ontology/bibo/doi> "" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/ontology/bibo/status> "" .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/vocab/vann/preferredNamespacePrefix> "experts"@en .
+<http://emmo.info/emmo/application/maeo/experts> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://emmo.info/emmo/application/maeo/experts" .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2000/01/rdf-schema#comment> "Contacts:\r\n\tGerhard Goldbeck\r\n\tGoldbeck Consulting Ltd (UK)\r\n\temail: gerhard@goldbeck-consulting.com"@en .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> "" .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#priorVersion> "" .
+<http://emmo.info/emmo/application/maeo/experts> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0-beta3" .
+<http://emmo.info/emmo/application/maeo/experts> <http://xmlns.com/foaf/0.1/logo> "" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://emmo.info/emmo/application/maeo/experts#amountsTo
+<http://emmo.info/emmo/application/maeo/experts#amountsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#amountsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#amountsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#DailyRate> .
+<http://emmo.info/emmo/application/maeo/experts#amountsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Remuneration> .
+<http://emmo.info/emmo/application/maeo/experts#amountsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#amountsTo> <http://www.w3.org/2000/01/rdf-schema#label> "amountsTo" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#expertiseOn
+<http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expertise> .
+<http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://www.w3.org/2000/01/rdf-schema#label> "expertiseOn" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#hasCertification
+<http://emmo.info/emmo/application/maeo/experts#hasCertification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasCertification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasCertification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#hasCertification> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Certification> .
+<http://emmo.info/emmo/application/maeo/experts#hasCertification> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#hasCertification> <http://www.w3.org/2000/01/rdf-schema#label> "hasCertification" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#hasExpertise
+<http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> .
+<http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Expertise> .
+<http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://www.w3.org/2000/01/rdf-schema#label> "hasExpertise" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#hasExternalProfile
+<http://emmo.info/emmo/application/maeo/experts#hasExternalProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasExternalProfile> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasExternalProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#hasExternalProfile> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#ExternalProfile> .
+<http://emmo.info/emmo/application/maeo/experts#hasExternalProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#hasExternalProfile> <http://www.w3.org/2000/01/rdf-schema#label> "hasExternalProfile" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#hasProfile
+<http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://www.w3.org/2000/01/rdf-schema#label> "hasProfile" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#hasRemuneration
+<http://emmo.info/emmo/application/maeo/experts#hasRemuneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasRemuneration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#hasRemuneration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Contract> .
+<http://emmo.info/emmo/application/maeo/experts#hasRemuneration> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Remuneration> .
+<http://emmo.info/emmo/application/maeo/experts#hasRemuneration> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#hasRemuneration> <http://www.w3.org/2000/01/rdf-schema#label> "hasRemuneration" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#isLocatedAt
+<http://emmo.info/emmo/application/maeo/experts#isLocatedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#isLocatedAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#isLocatedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> .
+<http://emmo.info/emmo/application/maeo/experts#isLocatedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Location> .
+<http://emmo.info/emmo/application/maeo/experts#isLocatedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#isLocatedAt> <http://www.w3.org/2000/01/rdf-schema#label> "isLocatedAt" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#isUnderContract
+<http://emmo.info/emmo/application/maeo/experts#isUnderContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#isUnderContract> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#isUnderContract> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#isUnderContract> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Contract> .
+<http://emmo.info/emmo/application/maeo/experts#isUnderContract> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#isUnderContract> <http://www.w3.org/2000/01/rdf-schema#label> "isUnderContract" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#issuedBy
+<http://emmo.info/emmo/application/maeo/experts#issuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#issuedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#issuedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Certification> .
+<http://emmo.info/emmo/application/maeo/experts#issuedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#CertificationAuthority> .
+<http://emmo.info/emmo/application/maeo/experts#issuedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#issuedBy> <http://www.w3.org/2000/01/rdf-schema#label> "issuedBy" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#knowsLanguage
+<http://emmo.info/emmo/application/maeo/experts#knowsLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#knowsLanguage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#knowsLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#knowsLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Language> .
+<http://emmo.info/emmo/application/maeo/experts#knowsLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#knowsLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "knowsLanguage" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty
+<http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204> .
+<http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "maeoObjectProperty" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise
+<http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> .
+<http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#Organization> .
+<http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise> <http://www.w3.org/2000/01/rdf-schema#label> "refersToOrganizationWithExpertise" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#requests
+<http://emmo.info/emmo/application/maeo/experts#requests> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#requests> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#requests> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#requests> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#DailyRate> .
+<http://emmo.info/emmo/application/maeo/experts#requests> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#requests> <http://www.w3.org/2000/01/rdf-schema#label> "requests" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#worksAt
+<http://emmo.info/emmo/application/maeo/experts#worksAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#worksAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty> .
+<http://emmo.info/emmo/application/maeo/experts#worksAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#worksAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> .
+<http://emmo.info/emmo/application/maeo/experts#worksAt> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#worksAt> <http://www.w3.org/2000/01/rdf-schema#label> "worksAt" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://emmo.info/emmo/application/maeo/experts#address
+<http://emmo.info/emmo/application/maeo/experts#address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#address> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Location> .
+<http://emmo.info/emmo/application/maeo/experts#address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#address> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#address> <http://www.w3.org/2000/01/rdf-schema#label> "address" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName
+<http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#CertificationAuthority> .
+<http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName> <http://www.w3.org/2000/01/rdf-schema#label> "certificationAuthorityName" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#certificationTitle
+<http://emmo.info/emmo/application/maeo/experts#certificationTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#certificationTitle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#certificationTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Certification> .
+<http://emmo.info/emmo/application/maeo/experts#certificationTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://emmo.info/emmo/application/maeo/experts#certificationTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#certificationTitle> <http://www.w3.org/2000/01/rdf-schema#label> "certificationTitle" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#contractConstraint
+<http://emmo.info/emmo/application/maeo/experts#contractConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#contractConstraint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#contractConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Contract> .
+<http://emmo.info/emmo/application/maeo/experts#contractConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#contractConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#contractConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "contractConstraint" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#contractType
+<http://emmo.info/emmo/application/maeo/experts#contractType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#contractType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#contractType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Contract> .
+<http://emmo.info/emmo/application/maeo/experts#contractType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#contractType> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#contractType> <http://www.w3.org/2000/01/rdf-schema#label> "contractType" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#experienceInYears
+<http://emmo.info/emmo/application/maeo/experts#experienceInYears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#experienceInYears> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#experienceInYears> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#experienceInYears> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://emmo.info/emmo/application/maeo/experts#experienceInYears> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#experienceInYears> <http://www.w3.org/2000/01/rdf-schema#label> "experienceInYears" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#expirationDate
+<http://emmo.info/emmo/application/maeo/experts#expirationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#expirationDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#expirationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Certification> .
+<http://emmo.info/emmo/application/maeo/experts#expirationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://emmo.info/emmo/application/maeo/experts#expirationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#expirationDate> <http://www.w3.org/2000/01/rdf-schema#label> "expirationDate" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#externalProfileName
+<http://emmo.info/emmo/application/maeo/experts#externalProfileName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#ExternalProfile> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileName> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileName> <http://www.w3.org/2000/01/rdf-schema#label> "externalProfileName" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#externalProfileUrl
+<http://emmo.info/emmo/application/maeo/experts#externalProfileUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileUrl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#ExternalProfile> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#externalProfileUrl> <http://www.w3.org/2000/01/rdf-schema#label> "externalProfileUrl" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#languageCode
+<http://emmo.info/emmo/application/maeo/experts#languageCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Language> .
+<http://emmo.info/emmo/application/maeo/experts#languageCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#languageCode> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#languageCode> <http://www.w3.org/2000/01/rdf-schema#label> "languageCode" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#languageLevel
+<http://emmo.info/emmo/application/maeo/experts#languageLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#languageLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#languageLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#languageLevel> <http://www.w3.org/2000/01/rdf-schema#label> "languageLevel" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#languageName
+<http://emmo.info/emmo/application/maeo/experts#languageName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Language> .
+<http://emmo.info/emmo/application/maeo/experts#languageName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#languageName> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#languageName> <http://www.w3.org/2000/01/rdf-schema#label> "languageName" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#languageType
+<http://emmo.info/emmo/application/maeo/experts#languageType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#languageType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://emmo.info/emmo/application/maeo/experts#languageType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#languageType> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#languageType> <http://www.w3.org/2000/01/rdf-schema#label> "languageType" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty
+<http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> <http://www.w3.org/2000/01/rdf-schema#label> "maeoDatatypeProperty" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#profileAddress
+<http://emmo.info/emmo/application/maeo/experts#profileAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileAddress> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#profileAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#profileAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#profileAddress> <http://www.w3.org/2000/01/rdf-schema#label> "profileAddress" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#profileEmail
+<http://emmo.info/emmo/application/maeo/experts#profileEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileEmail> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileEmail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#profileEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#profileEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#profileEmail> <http://www.w3.org/2000/01/rdf-schema#label> "profileEmail" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#profileName
+<http://emmo.info/emmo/application/maeo/experts#profileName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#profileName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#profileName> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#profileName> <http://www.w3.org/2000/01/rdf-schema#label> "profileName" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#profileUsername
+<http://emmo.info/emmo/application/maeo/experts#profileUsername> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileUsername> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#profileUsername> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#profileUsername> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#profileUsername> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#profileUsername> <http://www.w3.org/2000/01/rdf-schema#label> "profileUsername" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#remunerationCurrency
+<http://emmo.info/emmo/application/maeo/experts#remunerationCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationCurrency> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Remuneration> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#remunerationCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "remunerationCurrency" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#remunerationValue
+<http://emmo.info/emmo/application/maeo/experts#remunerationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Remuneration> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://emmo.info/emmo/application/maeo/experts#remunerationValue> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#remunerationValue> <http://www.w3.org/2000/01/rdf-schema#label> "remunerationValue" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace
+<http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty> .
+<http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace> <http://www.w3.org/2000/01/rdf-schema#label> "yearsOnMarketPlace" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://emmo.info/emmo/application/maeo/experts#Certification
+<http://emmo.info/emmo/application/maeo/experts#Certification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Certification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#CertificationDetail> .
+<http://emmo.info/emmo/application/maeo/experts#Certification> <http://www.w3.org/2000/01/rdf-schema#comment> "It describes an actual certification a human expert may possess, with datatype properties like certificationTitle and expirationDate." .
+<http://emmo.info/emmo/application/maeo/experts#Certification> <http://www.w3.org/2000/01/rdf-schema#label> "Certification" .
+<http://emmo.info/emmo/application/maeo/experts#Certification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Certification"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#CertificationAuthority
+<http://emmo.info/emmo/application/maeo/experts#CertificationAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#CertificationAuthority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#CertificationDetail> .
+<http://emmo.info/emmo/application/maeo/experts#CertificationAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "It models the authority that has issued a certification." .
+<http://emmo.info/emmo/application/maeo/experts#CertificationAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "Certification Authority" .
+<http://emmo.info/emmo/application/maeo/experts#CertificationAuthority> <http://www.w3.org/2004/02/skos/core#prefLabel> "Certification Authority"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#CertificationDetail
+<http://emmo.info/emmo/application/maeo/experts#CertificationDetail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#CertificationDetail> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> .
+<http://emmo.info/emmo/application/maeo/experts#CertificationDetail> <http://www.w3.org/2000/01/rdf-schema#comment> "It is meant to describe the details of certifications possessed by a human expert." .
+<http://emmo.info/emmo/application/maeo/experts#CertificationDetail> <http://www.w3.org/2000/01/rdf-schema#label> "Certification Detail" .
+<http://emmo.info/emmo/application/maeo/experts#CertificationDetail> <http://www.w3.org/2004/02/skos/core#prefLabel> "Certification Detail"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Competence
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://emmo.info/emmo/domain/oie/characterisation-methods#CharacterisationMethod> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://emmo.info/emmo/domain/oie/manufacturing#Manufacturing> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://emmo.info/emmo/domain/oie/materials#Material> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://emmo.info/emmo/domain/oie/models#Model> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://emmo.info/emmo/domain/oie/software#Software> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2000/01/rdf-schema#label> "Competence" .
+<http://emmo.info/emmo/application/maeo/experts#Competence> <http://www.w3.org/2004/02/skos/core#prefLabel> "Competence"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Contract
+<http://emmo.info/emmo/application/maeo/experts#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ContractualDetail> .
+<http://emmo.info/emmo/application/maeo/experts#Contract> <http://www.w3.org/2000/01/rdf-schema#comment> "It is meant to model the actual contract(s) a given expert may be currently under. It includes datatype properties like contractType and contractConstraint, the latter modeling potential legal or business constraints and limitations a contract may specify with regard to potential consulting and collaboration activities an expert may be allowed to carry out." .
+<http://emmo.info/emmo/application/maeo/experts#Contract> <http://www.w3.org/2000/01/rdf-schema#label> "Contract" .
+<http://emmo.info/emmo/application/maeo/experts#Contract> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#ContractualDetail
+<http://emmo.info/emmo/application/maeo/experts#ContractualDetail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#ContractualDetail> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> .
+<http://emmo.info/emmo/application/maeo/experts#ContractualDetail> <http://www.w3.org/2000/01/rdf-schema#comment> "It describes the details about the contract a human experts is currently under." .
+<http://emmo.info/emmo/application/maeo/experts#ContractualDetail> <http://www.w3.org/2000/01/rdf-schema#label> "Contractual Detail" .
+<http://emmo.info/emmo/application/maeo/experts#ContractualDetail> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contractual Detail"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#DailyRate
+<http://emmo.info/emmo/application/maeo/experts#DailyRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#DailyRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> .
+<http://emmo.info/emmo/application/maeo/experts#DailyRate> <http://www.w3.org/2000/01/rdf-schema#comment> "It models the daily rate a human experts requests." .
+<http://emmo.info/emmo/application/maeo/experts#DailyRate> <http://www.w3.org/2000/01/rdf-schema#label> "Daily Rate" .
+<http://emmo.info/emmo/application/maeo/experts#DailyRate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Daily Rate"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Expert
+<http://emmo.info/emmo/application/maeo/experts#Expert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Expert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> .
+<http://emmo.info/emmo/application/maeo/experts#Expert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<http://emmo.info/emmo/application/maeo/experts#Expert> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge-providing human expert that possesses a certain expertise and whose information can be stored and accessed within the MarketPlace application. It sports datatype properties like experienceInYears and yearsOnMarketPlace, and it is the domain of several object properties." .
+<http://emmo.info/emmo/application/maeo/experts#Expert> <http://www.w3.org/2000/01/rdf-schema#label> "Expert" .
+<http://emmo.info/emmo/application/maeo/experts#Expert> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty
+<http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "It is meant to represent the superclass of all of the objective properties potentially possessed by the entities of the MAEO ontology." .
+<http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Expert Objective Property" .
+<http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert Objective Property"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#ExpertOrganization
+<http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "It models the organization an expert may be working at/with, distinguishing it from a knowledge-providing organization. An instance of the former may also be the same organization as an instance of the latter; in order to model such a case, the object property refersToOrganizationWithExpertise (domain: ExpertOrganization, range: Organization) has been introduced for connecting the two." .
+<http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "Expert Organization" .
+<http://emmo.info/emmo/application/maeo/experts#ExpertOrganization> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert Organization"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty
+<http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo#EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> .
+<http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "It is meant to represent the superclass of subjective properties that may be possessed by entities modeled in the MAEO ontology." .
+<http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Expert Subjective Property" .
+<http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert Subjective Property"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Expertise
+<http://emmo.info/emmo/application/maeo/experts#Expertise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise> <http://www.w3.org/2000/01/rdf-schema#comment> "It represents the expertise possessed by a generic knowledge provider, by which users of the MarketPlace application can look for experts and such (and vice versa)." .
+<http://emmo.info/emmo/application/maeo/experts#Expertise> <http://www.w3.org/2000/01/rdf-schema#label> "Expertise" .
+<http://emmo.info/emmo/application/maeo/experts#Expertise> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expertise"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#ExternalProfile
+<http://emmo.info/emmo/application/maeo/experts#ExternalProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#ExternalProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#PersonalDetail> .
+<http://emmo.info/emmo/application/maeo/experts#ExternalProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "It represents a connection with an external profile for a given experts, e.g. a social network profile on LinkedIn, Facebook, etc." .
+<http://emmo.info/emmo/application/maeo/experts#ExternalProfile> <http://www.w3.org/2000/01/rdf-schema#label> "External Profile" .
+<http://emmo.info/emmo/application/maeo/experts#ExternalProfile> <http://www.w3.org/2004/02/skos/core#prefLabel> "External Profile"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "It models a generic provider of knowledge that possesses a certain expertise." .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Provider" .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge Provider"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker> <http://www.w3.org/2000/01/rdf-schema#comment> "It models a generic seeker of knowledge as a user of the MarketPlace application." .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Seeker" .
+<http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker> <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge Seeker"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Lab
+<http://emmo.info/emmo/application/maeo/experts#Lab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Lab> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> .
+<http://emmo.info/emmo/application/maeo/experts#Lab> <http://www.w3.org/2000/01/rdf-schema#comment> "a knowledge-providing laboratory." .
+<http://emmo.info/emmo/application/maeo/experts#Lab> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge-providing Lab" .
+<http://emmo.info/emmo/application/maeo/experts#Lab> <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge-providing Lab"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Language
+<http://emmo.info/emmo/application/maeo/experts#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Language> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> .
+<http://emmo.info/emmo/application/maeo/experts#Language> <http://www.w3.org/2000/01/rdf-schema#comment> "It describes a language known by a human expert. By reification (via the rdf:Statement construct), the datatype properties languageType and languageLevel are associated with a 'Expert knowsLanguage Language' triple." .
+<http://emmo.info/emmo/application/maeo/experts#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language" .
+<http://emmo.info/emmo/application/maeo/experts#Language> <http://www.w3.org/2004/02/skos/core#prefLabel> "Language"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Location
+<http://emmo.info/emmo/application/maeo/experts#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail> .
+<http://emmo.info/emmo/application/maeo/experts#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "It describes the physical address of an organization." .
+<http://emmo.info/emmo/application/maeo/experts#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+<http://emmo.info/emmo/application/maeo/experts#Location> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "It models a generic Agent in the MarketPlace, i.e. any entity (Knowledge Seeker, Knowledge Provider) that can act on the MarketPlace" .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> <http://www.w3.org/2000/01/rdf-schema#label> "MarketPlace Agent" .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "MarketPlace Agent"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the root class of the MAEO ontology, introduced for providing the ontology itself with a tree-like structure, with all of its other explicitly defined internal classes being subclasses of this class at various hierarchical levels." .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> <http://www.w3.org/2000/01/rdf-schema#label> "MarketPlace Agent and Expert Ontology" .
+<http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology> <http://www.w3.org/2004/02/skos/core#prefLabel> "MarketPlace Agent and Expert Ontology"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Organization
+<http://emmo.info/emmo/application/maeo/experts#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> .
+<http://emmo.info/emmo/application/maeo/experts#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge-providing juridical entity that possesses a certain expertise, and may or may not have something to do with Experts" .
+<http://emmo.info/emmo/application/maeo/experts#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge-providing Organization" .
+<http://emmo.info/emmo/application/maeo/experts#Organization> <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge-providing Organization"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail
+<http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> .
+<http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail> <http://www.w3.org/2000/01/rdf-schema#comment> "It is meant to model the details of the company, institution, organization an expert may be working at/with." .
+<http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail> <http://www.w3.org/2000/01/rdf-schema#label> "Organizational Detail" .
+<http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organizational Detail"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#PersonalDetail
+<http://emmo.info/emmo/application/maeo/experts#PersonalDetail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#PersonalDetail> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> .
+<http://emmo.info/emmo/application/maeo/experts#PersonalDetail> <http://www.w3.org/2000/01/rdf-schema#comment> "It models the personal details (name, address, contacts, etc.) of a human expert." .
+<http://emmo.info/emmo/application/maeo/experts#PersonalDetail> <http://www.w3.org/2000/01/rdf-schema#label> "Personal Detail" .
+<http://emmo.info/emmo/application/maeo/experts#PersonalDetail> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal Detail"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail
+<http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty> .
+<http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> <http://www.w3.org/2000/01/rdf-schema#comment> "It is meant to encompass the professional details of a human expert, e.g. title, role, qualifications, languages spoken, current or desired daily rate for hiring and its corresponding remuneration, etc." .
+<http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> <http://www.w3.org/2000/01/rdf-schema#label> "Professional Detail" .
+<http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional Detail"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Profile
+<http://emmo.info/emmo/application/maeo/experts#Profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#PersonalDetail> .
+<http://emmo.info/emmo/application/maeo/experts#Profile> <http://www.w3.org/2000/01/rdf-schema#comment> "It includes the details of a human expert's profile." .
+<http://emmo.info/emmo/application/maeo/experts#Profile> <http://www.w3.org/2000/01/rdf-schema#label> "Profile" .
+<http://emmo.info/emmo/application/maeo/experts#Profile> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profile"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Remuneration
+<http://emmo.info/emmo/application/maeo/experts#Remuneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Remuneration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail> .
+<http://emmo.info/emmo/application/maeo/experts#Remuneration> <http://www.w3.org/2000/01/rdf-schema#comment> "It models the remuneration value and currency of the daily rate requested by a human expert, as well as the one associated with an existing contract a human expert may be under." .
+<http://emmo.info/emmo/application/maeo/experts#Remuneration> <http://www.w3.org/2000/01/rdf-schema#label> "Remuneration" .
+<http://emmo.info/emmo/application/maeo/experts#Remuneration> <http://www.w3.org/2004/02/skos/core#prefLabel> "Remuneration"@en .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Team
+<http://emmo.info/emmo/application/maeo/experts#Team> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://emmo.info/emmo/application/maeo/experts#Team> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider> .
+<http://emmo.info/emmo/application/maeo/experts#Team> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge-providing group of people." .
+<http://emmo.info/emmo/application/maeo/experts#Team> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge-providing Team" .
+<http://emmo.info/emmo/application/maeo/experts#Team> <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge-providing Team"@en .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://emmo.info/emmo/application/maeo/experts#DTEN
+<http://emmo.info/emmo/application/maeo/experts#DTEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#DTEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://emmo.info/emmo/application/maeo/experts#DTEN> <http://emmo.info/emmo/application/maeo/experts#languageLevel> "C2" .
+<http://emmo.info/emmo/application/maeo/experts#DTEN> <http://emmo.info/emmo/application/maeo/experts#languageType> "Native/Bilingual" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#DanieleToti
+<http://emmo.info/emmo/application/maeo/experts#DanieleToti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#DanieleToti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#DanieleToti> <http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://emmo.info/emmo/application/maeo/experts#Expertise4> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#DanieleToti> <http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://emmo.info/emmo/application/maeo/experts#Profile3> .
+<http://emmo.info/emmo/application/maeo/experts#Profile3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#DanieleToti> <http://emmo.info/emmo/application/maeo/experts#knowsLanguage> <http://emmo.info/emmo/application/maeo/experts#English> .
+<http://emmo.info/emmo/application/maeo/experts#English> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://emmo.info/emmo/application/maeo/experts#English
+<http://emmo.info/emmo/application/maeo/experts#English> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Language> .
+<http://emmo.info/emmo/application/maeo/experts#English> <http://emmo.info/emmo/application/maeo/experts#languageCode> "EN" .
+<http://emmo.info/emmo/application/maeo/experts#English> <http://emmo.info/emmo/application/maeo/experts#languageName> "English" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Expertise1
+<http://emmo.info/emmo/application/maeo/experts#Expertise1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Expertise> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise1> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://emmo.info/emmo/domain/oie/software#Gromacs5.1> .
+<http://emmo.info/emmo/domain/oie/software#Gromacs5.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Expertise2
+<http://emmo.info/emmo/application/maeo/experts#Expertise2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Expertise> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise2> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced> .
+<http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Expertise3
+<http://emmo.info/emmo/application/maeo/experts#Expertise3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Expertise> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise3> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://emmo.info/emmo/domain/oie/software#Gromacs5.1> .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Expertise4
+<http://emmo.info/emmo/application/maeo/experts#Expertise4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Expertise> .
+<http://emmo.info/emmo/application/maeo/experts#Expertise4> <http://emmo.info/emmo/application/maeo/experts#expertiseOn> <http://emmo.info/emmo/domain/oie/software#MySQL8.0> .
+<http://emmo.info/emmo/domain/oie/software#MySQL8.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck
+<http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck> <http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://emmo.info/emmo/application/maeo/experts#Expertise2> .
+<http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck> <http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://emmo.info/emmo/application/maeo/experts#Expertise3> .
+<http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck> <http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://emmo.info/emmo/application/maeo/experts#Profile2> .
+<http://emmo.info/emmo/application/maeo/experts#Profile2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro
+<http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Expert> .
+<http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro> <http://emmo.info/emmo/application/maeo/experts#hasExpertise> <http://emmo.info/emmo/application/maeo/experts#Expertise1> .
+<http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro> <http://emmo.info/emmo/application/maeo/experts#hasProfile> <http://emmo.info/emmo/application/maeo/experts#Profile1> .
+<http://emmo.info/emmo/application/maeo/experts#Profile1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Profile1
+<http://emmo.info/emmo/application/maeo/experts#Profile1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#Profile1> <http://emmo.info/emmo/application/maeo/experts#profileName> "Pierluigi Del Nostro" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Profile2
+<http://emmo.info/emmo/application/maeo/experts#Profile2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#Profile2> <http://emmo.info/emmo/application/maeo/experts#profileName> "Gerhard Goldbeck" .
+# 
+# http://emmo.info/emmo/application/maeo/experts#Profile3
+<http://emmo.info/emmo/application/maeo/experts#Profile3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/application/maeo/experts#Profile> .
+<http://emmo.info/emmo/application/maeo/experts#Profile3> <http://emmo.info/emmo/application/maeo/experts#profileName> "Daniele Toti" .
+# 
+# http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced
+<http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/domain/oie/materials#FiberReinforcedComposite> .
+# 
+# http://emmo.info/emmo/domain/oie/software#Gromacs5.1
+<http://emmo.info/emmo/domain/oie/software#Gromacs5.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/domain/oie/software#Gromacs> .
+# 
+# http://emmo.info/emmo/domain/oie/software#MySQL8.0
+<http://emmo.info/emmo/domain/oie/software#MySQL8.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://emmo.info/emmo/domain/oie/software#Database> .
+# 
+# Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/

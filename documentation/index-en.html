@@ -1,0 +1,3419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>MAEO - MarketPlace Agent and Expert Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://emmo.info/emmo/application/maeo/experts","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://emmo.info/emmo/application/maeo/experts","name":"MAEO - MarketPlace Agent and Expert Ontology", "headline":"Document describing the ontology http://emmo.info/emmo/application/maeo/experts", "dateReleased":"2022-03-03", "version":"1.0.0-beta3", "license":"https://creativecommons.org/licenses/by/4.0/legalcode", "author":[{"@type":"Person","name":"Daniele Toti"},{"@type":"Person","name":"Gerhard Goldbeck"},{"@type":"Person","name":"Pierluigi Del Nostro"}], "contributor":[{"@type":"Person","name":"Goldbeck Consulting Ltd (UK)"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>MAEO - MarketPlace Agent and Expert Ontology</h1>
+<h2>Release: 2022-03-03</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://emmo.info/emmo/application/maeo/experts">http://emmo.info/emmo/application/maeo/experts</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://emmo.info/emmo/application/maeo/experts">http://emmo.info/emmo/application/maeo/experts</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0-beta3</dd>
+<dt>Authors:</dt>
+<dd>Daniele Toti</dd><dd>Gerhard Goldbeck</dd><dd>Pierluigi Del Nostro</dd>
+
+<dt>Contributors:</dt>
+<dd>Goldbeck Consulting Ltd (UK)</dd>
+
+<dt>Publisher:</dt>
+<dd>EMMC ASBL</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://emmo.info/emmo/disciplines/computerscience">computerscience</a></dd><dd><a href="http://emmo.info/emmo/disciplines/isq">isq</a></dd><dd><a href="http://emmo.info/emmo/disciplines/manufacturing">manufacturing</a></dd><dd><a href="http://emmo.info/emmo/disciplines/materials">materials</a></dd><dd><a href="http://emmo.info/emmo/disciplines/math">math</a></dd><dd><a href="http://emmo.info/emmo/disciplines/metrology">metrology</a></dd><dd><a href="http://emmo.info/emmo/disciplines/models">models</a></dd><dd><a href="http://emmo.info/emmo/disciplines/units/sidimensionalunits">sidimensionalunits</a></dd><dd><a href="http://emmo.info/emmo/domain/chameo/chameo">chameo</a></dd><dd><a href="http://emmo.info/emmo/domain/math">math</a></dd><dd><a href="http://emmo.info/emmo/domain/metrology">metrology</a></dd><dd><a href="http://emmo.info/emmo/domain/oie/characterisation-methods">characterisation-methods</a></dd><dd><a href="http://emmo.info/emmo/domain/oie/manufacturing">manufacturing</a></dd><dd><a href="http://emmo.info/emmo/domain/oie/materials">materials</a></dd><dd><a href="http://emmo.info/emmo/domain/oie/models">models</a></dd><dd><a href="http://emmo.info/emmo/domain/oie/software">software</a></dd><dd><a href="http://emmo.info/emmo/domain/properties">properties</a></dd><dd><a href="http://emmo.info/emmo/mereocausality">mereocausality</a></dd><dd><a href="http://emmo.info/emmo/middle/data">data</a></dd><dd><a href="http://emmo.info/emmo/middle/holistic">holistic</a></dd><dd><a href="http://emmo.info/emmo/middle/perceptual">perceptual</a></dd><dd><a href="http://emmo.info/emmo/middle/persholistic">persholistic</a></dd><dd><a href="http://emmo.info/emmo/middle/persistence">persistence</a></dd><dd><a href="http://emmo.info/emmo/middle/perspective">perspective</a></dd><dd><a href="http://emmo.info/emmo/middle/physicalistic">physicalistic</a></dd><dd><a href="http://emmo.info/emmo/middle/reductionistic">reductionistic</a></dd><dd><a href="http://emmo.info/emmo/middle/semiotics">semiotics</a></dd><dd><a href="http://emmo.info/emmo/middle/symbolic">symbolic</a></dd><dd><a href="http://emmo.info/emmo/multiperspective/persholistic">persholistic</a></dd><dd><a href="http://emmo.info/emmo/multiperspective/properties">properties</a></dd><dd><a href="http://emmo.info/emmo/multiperspective/symbolic">symbolic</a></dd><dd><a href="http://emmo.info/emmo/multiperspective/workflow">workflow</a></dd><dd><a href="http://emmo.info/emmo/perspectives/data">data</a></dd><dd><a href="http://emmo.info/emmo/perspectives/holistic">holistic</a></dd><dd><a href="http://emmo.info/emmo/perspectives/persistence">persistence</a></dd><dd><a href="http://emmo.info/emmo/perspectives/perspective">perspective</a></dd><dd><a href="http://emmo.info/emmo/perspectives/physicalistic">physicalistic</a></dd><dd><a href="http://emmo.info/emmo/perspectives/reductionistic">reductionistic</a></dd><dd><a href="http://emmo.info/emmo/perspectives/semiotics">semiotics</a></dd><dd><a href="http://emmo.info/emmo/perspectives/standardmodel">standardmodel</a></dd><dd><a href="http://emmo.info/emmo/top">top</a></dd><dd><a href="http://xmlns.com/foaf/0.1/">&lt;http://xmlns.com/foaf/0.1/&gt;</a></dd>
+
+<dt>Source:</dt>
+<dd><a href=""></a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/legalcode-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/legalcode" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Work under review - not available yet</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
+<tr><td><b>characterisation-methods</b></td><td>&lt;http://emmo.info/emmo/domain/oie/characterisation-methods#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>emmo</b></td><td>&lt;http://emmo.info/emmo#&gt;</td></tr>
+<tr><td><b>experts</b></td><td>&lt;http://emmo.info/emmo/application/maeo/experts#&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
+<tr><td><b>manufacturing</b></td><td>&lt;http://emmo.info/emmo/domain/oie/manufacturing#&gt;</td></tr>
+<tr><td><b>materials</b></td><td>&lt;http://emmo.info/emmo/domain/oie/materials#&gt;</td></tr>
+<tr><td><b>models</b></td><td>&lt;http://emmo.info/emmo/domain/oie/models#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
+<tr><td><b>software</b></td><td>&lt;http://emmo.info/emmo/domain/oie/software#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">MAEO - MarketPlace Agent and Expert Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Certification"
+         title="http://emmo.info/emmo/application/maeo/experts#Certification">Certification</a>
+   </li>
+   <li>
+      <a href="#CertificationAuthority"
+         title="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority">Certification Authority</a>
+   </li>
+   <li>
+      <a href="#CertificationDetail"
+         title="http://emmo.info/emmo/application/maeo/experts#CertificationDetail">Certification Detail</a>
+   </li>
+   <li>
+      <a href="#Competence"
+         title="http://emmo.info/emmo/application/maeo/experts#Competence">Competence</a>
+   </li>
+   <li>
+      <a href="#Contract"
+         title="http://emmo.info/emmo/application/maeo/experts#Contract">Contract</a>
+   </li>
+   <li>
+      <a href="#ContractualDetail"
+         title="http://emmo.info/emmo/application/maeo/experts#ContractualDetail">Contractual Detail</a>
+   </li>
+   <li>
+      <a href="#DailyRate"
+         title="http://emmo.info/emmo/application/maeo/experts#DailyRate">Daily Rate</a>
+   </li>
+   <li>
+      <a href="#Expert"
+         title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+   </li>
+   <li>
+      <a href="#ExpertObjectiveProperty"
+         title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+   </li>
+   <li>
+      <a href="#ExpertOrganization"
+         title="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization">Expert Organization</a>
+   </li>
+   <li>
+      <a href="#ExpertSubjectiveProperty"
+         title="http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty">Expert Subjective Property</a>
+   </li>
+   <li>
+      <a href="#Expertise"
+         title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+   </li>
+   <li>
+      <a href="#ExternalProfile"
+         title="http://emmo.info/emmo/application/maeo/experts#ExternalProfile">External Profile</a>
+   </li>
+   <li>
+      <a href="#KnowledgeProvider"
+         title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+   </li>
+   <li>
+      <a href="#KnowledgeSeeker"
+         title="http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker">Knowledge Seeker</a>
+   </li>
+   <li>
+      <a href="#Lab"
+         title="http://emmo.info/emmo/application/maeo/experts#Lab">Knowledge-providing Lab</a>
+   </li>
+   <li>
+      <a href="#Organization"
+         title="http://emmo.info/emmo/application/maeo/experts#Organization">Knowledge-providing Organization</a>
+   </li>
+   <li>
+      <a href="#Team"
+         title="http://emmo.info/emmo/application/maeo/experts#Team">Knowledge-providing Team</a>
+   </li>
+   <li>
+      <a href="#Language"
+         title="http://emmo.info/emmo/application/maeo/experts#Language">Language</a>
+   </li>
+   <li>
+      <a href="#Location"
+         title="http://emmo.info/emmo/application/maeo/experts#Location">Location</a>
+   </li>
+   <li>
+      <a href="#MarketPlaceAgent"
+         title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent">MarketPlace Agent</a>
+   </li>
+   <li>
+      <a href="#MarketPlaceAgentExpertOntology"
+         title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology">MarketPlace Agent and Expert Ontology</a>
+   </li>
+   <li>
+      <a href="#OrganizationalDetail"
+         title="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail">Organizational Detail</a>
+   </li>
+   <li>
+      <a href="#PersonalDetail"
+         title="http://emmo.info/emmo/application/maeo/experts#PersonalDetail">Personal Detail</a>
+   </li>
+   <li>
+      <a href="#ProfessionalDetail"
+         title="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail">Professional Detail</a>
+   </li>
+   <li>
+      <a href="#Profile"
+         title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+   </li>
+   <li>
+      <a href="#Remuneration"
+         title="http://emmo.info/emmo/application/maeo/experts#Remuneration">Remuneration</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#amountsTo"
+         title="http://emmo.info/emmo/application/maeo/experts#amountsTo">amountsTo</a>
+   </li>
+   <li>
+      <a href="#expertiseOn"
+         title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+   </li>
+   <li>
+      <a href="#hasCertification"
+         title="http://emmo.info/emmo/application/maeo/experts#hasCertification">hasCertification</a>
+   </li>
+   <li>
+      <a href="#hasExpertise"
+         title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+   </li>
+   <li>
+      <a href="#hasExternalProfile"
+         title="http://emmo.info/emmo/application/maeo/experts#hasExternalProfile">hasExternalProfile</a>
+   </li>
+   <li>
+      <a href="#hasProfile"
+         title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+   </li>
+   <li>
+      <a href="#hasRemuneration"
+         title="http://emmo.info/emmo/application/maeo/experts#hasRemuneration">hasRemuneration</a>
+   </li>
+   <li>
+      <a href="#isLocatedAt"
+         title="http://emmo.info/emmo/application/maeo/experts#isLocatedAt">isLocatedAt</a>
+   </li>
+   <li>
+      <a href="#issuedBy"
+         title="http://emmo.info/emmo/application/maeo/experts#issuedBy">issuedBy</a>
+   </li>
+   <li>
+      <a href="#isUnderContract"
+         title="http://emmo.info/emmo/application/maeo/experts#isUnderContract">isUnderContract</a>
+   </li>
+   <li>
+      <a href="#knowsLanguage"
+         title="http://emmo.info/emmo/application/maeo/experts#knowsLanguage">knowsLanguage</a>
+   </li>
+   <li>
+      <a href="#maeoObjectProperty"
+         title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+   </li>
+   <li>
+      <a href="#refersToOrganizationWithExpertise"
+         title="http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise">refersToOrganizationWithExpertise</a>
+   </li>
+   <li>
+      <a href="#requests"
+         title="http://emmo.info/emmo/application/maeo/experts#requests">requests</a>
+   </li>
+   <li>
+      <a href="#worksAt"
+         title="http://emmo.info/emmo/application/maeo/experts#worksAt">worksAt</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#address"
+         title="http://emmo.info/emmo/application/maeo/experts#address">address</a>
+   </li>
+   <li>
+      <a href="#certificationAuthorityName"
+         title="http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName">certificationAuthorityName</a>
+   </li>
+   <li>
+      <a href="#certificationTitle"
+         title="http://emmo.info/emmo/application/maeo/experts#certificationTitle">certificationTitle</a>
+   </li>
+   <li>
+      <a href="#contractConstraint"
+         title="http://emmo.info/emmo/application/maeo/experts#contractConstraint">contractConstraint</a>
+   </li>
+   <li>
+      <a href="#contractType"
+         title="http://emmo.info/emmo/application/maeo/experts#contractType">contractType</a>
+   </li>
+   <li>
+      <a href="#experienceInYears"
+         title="http://emmo.info/emmo/application/maeo/experts#experienceInYears">experienceInYears</a>
+   </li>
+   <li>
+      <a href="#expirationDate"
+         title="http://emmo.info/emmo/application/maeo/experts#expirationDate">expirationDate</a>
+   </li>
+   <li>
+      <a href="#externalProfileName"
+         title="http://emmo.info/emmo/application/maeo/experts#externalProfileName">externalProfileName</a>
+   </li>
+   <li>
+      <a href="#externalProfileUrl"
+         title="http://emmo.info/emmo/application/maeo/experts#externalProfileUrl">externalProfileUrl</a>
+   </li>
+   <li>
+      <a href="#languageCode"
+         title="http://emmo.info/emmo/application/maeo/experts#languageCode">languageCode</a>
+   </li>
+   <li>
+      <a href="#languageLevel"
+         title="http://emmo.info/emmo/application/maeo/experts#languageLevel">languageLevel</a>
+   </li>
+   <li>
+      <a href="#languageName"
+         title="http://emmo.info/emmo/application/maeo/experts#languageName">languageName</a>
+   </li>
+   <li>
+      <a href="#languageType"
+         title="http://emmo.info/emmo/application/maeo/experts#languageType">languageType</a>
+   </li>
+   <li>
+      <a href="#maeoDatatypeProperty"
+         title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+   </li>
+   <li>
+      <a href="#profileAddress"
+         title="http://emmo.info/emmo/application/maeo/experts#profileAddress">profileAddress</a>
+   </li>
+   <li>
+      <a href="#profileEmail"
+         title="http://emmo.info/emmo/application/maeo/experts#profileEmail">profileEmail</a>
+   </li>
+   <li>
+      <a href="#profileName"
+         title="http://emmo.info/emmo/application/maeo/experts#profileName">profileName</a>
+   </li>
+   <li>
+      <a href="#profileUsername"
+         title="http://emmo.info/emmo/application/maeo/experts#profileUsername">profileUsername</a>
+   </li>
+   <li>
+      <a href="#remunerationCurrency"
+         title="http://emmo.info/emmo/application/maeo/experts#remunerationCurrency">remunerationCurrency</a>
+   </li>
+   <li>
+      <a href="#remunerationValue"
+         title="http://emmo.info/emmo/application/maeo/experts#remunerationValue">remunerationValue</a>
+   </li>
+   <li>
+      <a href="#yearsOnMarketPlace"
+         title="http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace">yearsOnMarketPlace</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/ontology/bibo/status" title="http://purl.org/ontology/bibo/status">
+         <span>status</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#DTEN"
+         title="http://emmo.info/emmo/application/maeo/experts#DTEN">
+         <span>d t e n</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DanieleToti"
+         title="http://emmo.info/emmo/application/maeo/experts#DanieleToti">
+         <span>daniele toti</span>
+      </a>
+   </li>
+   <li>
+      <a href="#English"
+         title="http://emmo.info/emmo/application/maeo/experts#English">
+         <span>english</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced"
+         title="http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced">
+         <span>epoxy matrix composite reinforced</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Expertise1"
+         title="http://emmo.info/emmo/application/maeo/experts#Expertise1">
+         <span>expertise1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Expertise2"
+         title="http://emmo.info/emmo/application/maeo/experts#Expertise2">
+         <span>expertise2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Expertise3"
+         title="http://emmo.info/emmo/application/maeo/experts#Expertise3">
+         <span>expertise3</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Expertise4"
+         title="http://emmo.info/emmo/application/maeo/experts#Expertise4">
+         <span>expertise4</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GerhardGoldbeck"
+         title="http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck">
+         <span>gerhard goldbeck</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://emmo.info/emmo/domain/oie/software#Gromacs5.1"
+         title="http://emmo.info/emmo/domain/oie/software#Gromacs5.1">
+         <span>gromacs5.1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://emmo.info/emmo/domain/oie/software#MySQL8.0"
+         title="http://emmo.info/emmo/domain/oie/software#MySQL8.0">
+         <span>my s q l8.0</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PierluigiDelNostro"
+         title="http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro">
+         <span>pierluigi del nostro</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Profile1"
+         title="http://emmo.info/emmo/application/maeo/experts#Profile1">
+         <span>profile1</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Profile2"
+         title="http://emmo.info/emmo/application/maeo/experts#Profile2">
+         <span>profile2</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Profile3"
+         title="http://emmo.info/emmo/application/maeo/experts#Profile3">
+         <span>profile3</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">MAEO - MarketPlace Agent and Expert Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Contacts:
+	Gerhard Goldbeck
+	Goldbeck Consulting Ltd (UK)
+	email: gerhard@goldbeck-consulting.com</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for MAEO - MarketPlace Agent and Expert Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by MAEO - MarketPlace Agent and Expert Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Certification"
+            title="http://emmo.info/emmo/application/maeo/experts#Certification">Certification</a>
+      </li>
+      <li>
+         <a href="#CertificationAuthority"
+            title="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority">Certification Authority</a>
+      </li>
+      <li>
+         <a href="#CertificationDetail"
+            title="http://emmo.info/emmo/application/maeo/experts#CertificationDetail">Certification Detail</a>
+      </li>
+      <li>
+         <a href="#Competence"
+            title="http://emmo.info/emmo/application/maeo/experts#Competence">Competence</a>
+      </li>
+      <li>
+         <a href="#Contract"
+            title="http://emmo.info/emmo/application/maeo/experts#Contract">Contract</a>
+      </li>
+      <li>
+         <a href="#ContractualDetail"
+            title="http://emmo.info/emmo/application/maeo/experts#ContractualDetail">Contractual Detail</a>
+      </li>
+      <li>
+         <a href="#DailyRate"
+            title="http://emmo.info/emmo/application/maeo/experts#DailyRate">Daily Rate</a>
+      </li>
+      <li>
+         <a href="#Expert"
+            title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+      </li>
+      <li>
+         <a href="#ExpertObjectiveProperty"
+            title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+      </li>
+      <li>
+         <a href="#ExpertOrganization"
+            title="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization">Expert Organization</a>
+      </li>
+      <li>
+         <a href="#ExpertSubjectiveProperty"
+            title="http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty">Expert Subjective Property</a>
+      </li>
+      <li>
+         <a href="#Expertise"
+            title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+      </li>
+      <li>
+         <a href="#ExternalProfile"
+            title="http://emmo.info/emmo/application/maeo/experts#ExternalProfile">External Profile</a>
+      </li>
+      <li>
+         <a href="#KnowledgeProvider"
+            title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+      </li>
+      <li>
+         <a href="#KnowledgeSeeker"
+            title="http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker">Knowledge Seeker</a>
+      </li>
+      <li>
+         <a href="#Lab"
+            title="http://emmo.info/emmo/application/maeo/experts#Lab">Knowledge-providing Lab</a>
+      </li>
+      <li>
+         <a href="#Organization"
+            title="http://emmo.info/emmo/application/maeo/experts#Organization">Knowledge-providing Organization</a>
+      </li>
+      <li>
+         <a href="#Team"
+            title="http://emmo.info/emmo/application/maeo/experts#Team">Knowledge-providing Team</a>
+      </li>
+      <li>
+         <a href="#Language"
+            title="http://emmo.info/emmo/application/maeo/experts#Language">Language</a>
+      </li>
+      <li>
+         <a href="#Location"
+            title="http://emmo.info/emmo/application/maeo/experts#Location">Location</a>
+      </li>
+      <li>
+         <a href="#MarketPlaceAgent"
+            title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent">MarketPlace Agent</a>
+      </li>
+      <li>
+         <a href="#MarketPlaceAgentExpertOntology"
+            title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology">MarketPlace Agent and Expert Ontology</a>
+      </li>
+      <li>
+         <a href="#OrganizationalDetail"
+            title="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail">Organizational Detail</a>
+      </li>
+      <li>
+         <a href="#PersonalDetail"
+            title="http://emmo.info/emmo/application/maeo/experts#PersonalDetail">Personal Detail</a>
+      </li>
+      <li>
+         <a href="#ProfessionalDetail"
+            title="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail">Professional Detail</a>
+      </li>
+      <li>
+         <a href="#Profile"
+            title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+      </li>
+      <li>
+         <a href="#Remuneration"
+            title="http://emmo.info/emmo/application/maeo/experts#Remuneration">Remuneration</a>
+      </li>
+   </ul>
+   <div class="entity" id="Certification">
+      <h3>Certification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Certification</p>
+      <div class="comment">
+         <span class="markdown">It describes an actual certification a human expert may possess, with datatype properties like certificationTitle and expirationDate.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CertificationDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#CertificationDetail">Certification Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#certificationTitle"
+               title="http://emmo.info/emmo/application/maeo/experts#certificationTitle">certificationTitle</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#expirationDate"
+               title="http://emmo.info/emmo/application/maeo/experts#expirationDate">expirationDate</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#issuedBy"
+               title="http://emmo.info/emmo/application/maeo/experts#issuedBy">issuedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCertification"
+               title="http://emmo.info/emmo/application/maeo/experts#hasCertification">hasCertification</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CertificationAuthority">
+      <h3>Certification Authority<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#CertificationAuthority</p>
+      <div class="comment">
+         <span class="markdown">It models the authority that has issued a certification.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#CertificationDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#CertificationDetail">Certification Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#certificationAuthorityName"
+               title="http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName">certificationAuthorityName</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#issuedBy"
+               title="http://emmo.info/emmo/application/maeo/experts#issuedBy">issuedBy</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CertificationDetail">
+      <h3>Certification Detail<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#CertificationDetail</p>
+      <div class="comment">
+         <span class="markdown">It is meant to describe the details of certifications possessed by a human expert.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpertObjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Certification"
+               title="http://emmo.info/emmo/application/maeo/experts#Certification">Certification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CertificationAuthority"
+               title="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority">Certification Authority</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Competence">
+      <h3>Competence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Competence</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://emmo.info/emmo/domain/oie/characterisation-methods#CharacterisationMethod"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/characterisation-methods#CharacterisationMethod">characterisation method</a>
+         </dd>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://emmo.info/emmo/domain/oie/manufacturing#Manufacturing"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/manufacturing#Manufacturing">manufacturing</a>
+         </dd>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://emmo.info/emmo/domain/oie/materials#Material"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/materials#Material">material</a>
+         </dd>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://emmo.info/emmo/domain/oie/models#Model"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/models#Model">model</a>
+         </dd>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://emmo.info/emmo/domain/oie/software#Software"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/software#Software">software</a>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MarketPlaceAgentExpertOntology"
+               title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology">MarketPlace Agent and Expert Ontology</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Contract">
+      <h3>Contract<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Contract</p>
+      <div class="comment">
+         <span class="markdown">It is meant to model the actual contract(s) a given expert may be currently under. It includes datatype properties like contractType and contractConstraint, the latter modeling potential legal or business constraints and limitations a contract may specify with regard to potential consulting and collaboration activities an expert may be allowed to carry out.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ContractualDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#ContractualDetail">Contractual Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#contractConstraint"
+               title="http://emmo.info/emmo/application/maeo/experts#contractConstraint">contractConstraint</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#contractType"
+               title="http://emmo.info/emmo/application/maeo/experts#contractType">contractType</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRemuneration"
+               title="http://emmo.info/emmo/application/maeo/experts#hasRemuneration">hasRemuneration</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isUnderContract"
+               title="http://emmo.info/emmo/application/maeo/experts#isUnderContract">isUnderContract</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ContractualDetail">
+      <h3>Contractual Detail<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#ContractualDetail</p>
+      <div class="comment">
+         <span class="markdown">It describes the details about the contract a human experts is currently under.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpertObjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Contract"
+               title="http://emmo.info/emmo/application/maeo/experts#Contract">Contract</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DailyRate">
+      <h3>Daily Rate<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#DailyRate</p>
+      <div class="comment">
+         <span class="markdown">It models the daily rate a human experts requests.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ProfessionalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail">Professional Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#amountsTo"
+               title="http://emmo.info/emmo/application/maeo/experts#amountsTo">amountsTo</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#requests"
+               title="http://emmo.info/emmo/application/maeo/experts#requests">requests</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Expert">
+      <h3>Expert<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Expert</p>
+      <div class="comment">
+         <span class="markdown">A knowledge-providing human expert that possesses a certain expertise and whose information can be stored and accessed within the MarketPlace application. It sports datatype properties like experienceInYears and yearsOnMarketPlace, and it is the domain of several object properties.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#KnowledgeProvider"
+               title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://xmlns.com/foaf/0.1/Person"
+               target="_blank"
+               title="http://xmlns.com/foaf/0.1/Person">person</a>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#experienceInYears"
+               title="http://emmo.info/emmo/application/maeo/experts#experienceInYears">experienceInYears</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCertification"
+               title="http://emmo.info/emmo/application/maeo/experts#hasCertification">hasCertification</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasExternalProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExternalProfile">hasExternalProfile</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUnderContract"
+               title="http://emmo.info/emmo/application/maeo/experts#isUnderContract">isUnderContract</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#knowsLanguage"
+               title="http://emmo.info/emmo/application/maeo/experts#knowsLanguage">knowsLanguage</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#requests"
+               title="http://emmo.info/emmo/application/maeo/experts#requests">requests</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#worksAt"
+               title="http://emmo.info/emmo/application/maeo/experts#worksAt">worksAt</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#yearsOnMarketPlace"
+               title="http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace">yearsOnMarketPlace</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#DanieleToti"
+               title="http://emmo.info/emmo/application/maeo/experts#DanieleToti">daniele toti</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GerhardGoldbeck"
+               title="http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck">gerhard goldbeck</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PierluigiDelNostro"
+               title="http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro">pierluigi del nostro</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ExpertObjectiveProperty">
+      <h3>Expert Objective Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty</p>
+      <div class="comment">
+         <span class="markdown">It is meant to represent the superclass of all of the objective properties potentially possessed by the entities of the MAEO ontology.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MarketPlaceAgentExpertOntology"
+               title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology">MarketPlace Agent and Expert Ontology</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978"
+               target="_blank"
+               title="http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978">e m m o 2a888cdf ec4a 4ec5 af1c 0343372fc978</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#CertificationDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#CertificationDetail">Certification Detail</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ContractualDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#ContractualDetail">Contractual Detail</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OrganizationalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail">Organizational Detail</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PersonalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#PersonalDetail">Personal Detail</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProfessionalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail">Professional Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ExpertOrganization">
+      <h3>Expert Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#ExpertOrganization</p>
+      <div class="comment">
+         <span class="markdown">It models the organization an expert may be working at/with, distinguishing it from a knowledge-providing organization. An instance of the former may also be the same organization as an instance of the latter; in order to model such a case, the object property refersToOrganizationWithExpertise (domain: ExpertOrganization, range: Organization) has been introduced for connecting the two.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#OrganizationalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail">Organizational Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isLocatedAt"
+               title="http://emmo.info/emmo/application/maeo/experts#isLocatedAt">isLocatedAt</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#refersToOrganizationWithExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise">refersToOrganizationWithExpertise</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#worksAt"
+               title="http://emmo.info/emmo/application/maeo/experts#worksAt">worksAt</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ExpertSubjectiveProperty">
+      <h3>Expert Subjective Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty</p>
+      <div class="comment">
+         <span class="markdown">It is meant to represent the superclass of subjective properties that may be possessed by entities modeled in the MAEO ontology.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MarketPlaceAgentExpertOntology"
+               title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology">MarketPlace Agent and Expert Ontology</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://emmo.info/emmo#EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8"
+               target="_blank"
+               title="http://emmo.info/emmo#EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8">e m m o 251cfb4f 5c75 4778 91ed 6c8395212fd8</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Expertise"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Expertise">
+      <h3>Expertise<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Expertise</p>
+      <div class="comment">
+         <span class="markdown">It represents the expertise possessed by a generic knowledge provider, by which users of the MarketPlace application can look for experts and such (and vice versa).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpertSubjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty">Expert Subjective Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Expertise1"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise1">expertise1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Expertise2"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise2">expertise2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Expertise3"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise3">expertise3</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Expertise4"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise4">expertise4</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ExternalProfile">
+      <h3>External Profile<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#ExternalProfile</p>
+      <div class="comment">
+         <span class="markdown">It represents a connection with an external profile for a given experts, e.g. a social network profile on LinkedIn, Facebook, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PersonalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#PersonalDetail">Personal Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#externalProfileName"
+               title="http://emmo.info/emmo/application/maeo/experts#externalProfileName">externalProfileName</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#externalProfileUrl"
+               title="http://emmo.info/emmo/application/maeo/experts#externalProfileUrl">externalProfileUrl</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasExternalProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExternalProfile">hasExternalProfile</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="KnowledgeProvider">
+      <h3>Knowledge Provider<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider</p>
+      <div class="comment">
+         <span class="markdown">It models a generic provider of knowledge that possesses a certain expertise.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MarketPlaceAgent"
+               title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent">MarketPlace Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Expert"
+               title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Lab"
+               title="http://emmo.info/emmo/application/maeo/experts#Lab">Knowledge-providing Lab</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization"
+               title="http://emmo.info/emmo/application/maeo/experts#Organization">Knowledge-providing Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Team"
+               title="http://emmo.info/emmo/application/maeo/experts#Team">Knowledge-providing Team</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="KnowledgeSeeker">
+      <h3>Knowledge Seeker<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker</p>
+      <div class="comment">
+         <span class="markdown">It models a generic seeker of knowledge as a user of the MarketPlace application.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MarketPlaceAgent"
+               title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent">MarketPlace Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Lab">
+      <h3>Knowledge-providing Lab<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Lab</p>
+      <div class="comment">
+         <span class="markdown">a knowledge-providing laboratory.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#KnowledgeProvider"
+               title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Organization">
+      <h3>Knowledge-providing Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Organization</p>
+      <div class="comment">
+         <span class="markdown">A knowledge-providing juridical entity that possesses a certain expertise, and may or may not have something to do with Experts</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#KnowledgeProvider"
+               title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#refersToOrganizationWithExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise">refersToOrganizationWithExpertise</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Team">
+      <h3>Knowledge-providing Team<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Team</p>
+      <div class="comment">
+         <span class="markdown">A knowledge-providing group of people.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#KnowledgeProvider"
+               title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Language">
+      <h3>Language<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Language</p>
+      <div class="comment">
+         <span class="markdown">It describes a language known by a human expert. By reification (via the rdf:Statement construct), the datatype properties languageType and languageLevel are associated with a 'Expert knowsLanguage Language' triple.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ProfessionalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail">Professional Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#languageCode"
+               title="http://emmo.info/emmo/application/maeo/experts#languageCode">languageCode</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#languageName"
+               title="http://emmo.info/emmo/application/maeo/experts#languageName">languageName</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#knowsLanguage"
+               title="http://emmo.info/emmo/application/maeo/experts#knowsLanguage">knowsLanguage</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#English"
+               title="http://emmo.info/emmo/application/maeo/experts#English">english</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Location">
+      <h3>Location<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Location</p>
+      <div class="comment">
+         <span class="markdown">It describes the physical address of an organization.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#OrganizationalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail">Organizational Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#address"
+               title="http://emmo.info/emmo/application/maeo/experts#address">address</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isLocatedAt"
+               title="http://emmo.info/emmo/application/maeo/experts#isLocatedAt">isLocatedAt</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MarketPlaceAgent">
+      <h3>MarketPlace Agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent</p>
+      <div class="comment">
+         <span class="markdown">It models a generic Agent in the MarketPlace, i.e. any entity (Knowledge Seeker, Knowledge Provider) that can act on the MarketPlace</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MarketPlaceAgentExpertOntology"
+               title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology">MarketPlace Agent and Expert Ontology</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://xmlns.com/foaf/0.1/Agent"
+               target="_blank"
+               title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#KnowledgeProvider"
+               title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeSeeker"
+               title="http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker">Knowledge Seeker</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MarketPlaceAgentExpertOntology">
+      <h3>MarketPlace Agent and Expert Ontology<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology</p>
+      <div class="comment">
+         <span class="markdown">This is the root class of the MAEO ontology, introduced for providing the ontology itself with a tree-like structure, with all of its other explicitly defined internal classes being subclasses of this class at various hierarchical levels.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Competence"
+               title="http://emmo.info/emmo/application/maeo/experts#Competence">Competence</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpertObjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpertSubjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty">Expert Subjective Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MarketPlaceAgent"
+               title="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent">MarketPlace Agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OrganizationalDetail">
+      <h3>Organizational Detail<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail</p>
+      <div class="comment">
+         <span class="markdown">It is meant to model the details of the company, institution, organization an expert may be working at/with.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpertObjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ExpertOrganization"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization">Expert Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Location"
+               title="http://emmo.info/emmo/application/maeo/experts#Location">Location</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PersonalDetail">
+      <h3>Personal Detail<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#PersonalDetail</p>
+      <div class="comment">
+         <span class="markdown">It models the personal details (name, address, contacts, etc.) of a human expert.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpertObjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ExternalProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#ExternalProfile">External Profile</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Profile"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ProfessionalDetail">
+      <h3>Professional Detail<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail</p>
+      <div class="comment">
+         <span class="markdown">It is meant to encompass the professional details of a human expert, e.g. title, role, qualifications, languages spoken, current or desired daily rate for hiring and its corresponding remuneration, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ExpertObjectiveProperty"
+               title="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">Expert Objective Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DailyRate"
+               title="http://emmo.info/emmo/application/maeo/experts#DailyRate">Daily Rate</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Language"
+               title="http://emmo.info/emmo/application/maeo/experts#Language">Language</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Remuneration"
+               title="http://emmo.info/emmo/application/maeo/experts#Remuneration">Remuneration</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profile">
+      <h3>Profile<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Profile</p>
+      <div class="comment">
+         <span class="markdown">It includes the details of a human expert's profile.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PersonalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#PersonalDetail">Personal Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#profileAddress"
+               title="http://emmo.info/emmo/application/maeo/experts#profileAddress">profileAddress</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#profileEmail"
+               title="http://emmo.info/emmo/application/maeo/experts#profileEmail">profileEmail</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#profileName"
+               title="http://emmo.info/emmo/application/maeo/experts#profileName">profileName</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#profileUsername"
+               title="http://emmo.info/emmo/application/maeo/experts#profileUsername">profileUsername</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Profile1"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile1">profile1</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Profile2"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile2">profile2</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Profile3"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile3">profile3</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Remuneration">
+      <h3>Remuneration<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Remuneration</p>
+      <div class="comment">
+         <span class="markdown">It models the remuneration value and currency of the daily rate requested by a human expert, as well as the one associated with an existing contract a human expert may be under.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ProfessionalDetail"
+               title="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail">Professional Detail</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#remunerationCurrency"
+               title="http://emmo.info/emmo/application/maeo/experts#remunerationCurrency">remunerationCurrency</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#remunerationValue"
+               title="http://emmo.info/emmo/application/maeo/experts#remunerationValue">remunerationValue</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#amountsTo"
+               title="http://emmo.info/emmo/application/maeo/experts#amountsTo">amountsTo</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRemuneration"
+               title="http://emmo.info/emmo/application/maeo/experts#hasRemuneration">hasRemuneration</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#amountsTo"
+            title="http://emmo.info/emmo/application/maeo/experts#amountsTo">amountsTo</a>
+      </li>
+      <li>
+         <a href="#expertiseOn"
+            title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+      </li>
+      <li>
+         <a href="#hasCertification"
+            title="http://emmo.info/emmo/application/maeo/experts#hasCertification">hasCertification</a>
+      </li>
+      <li>
+         <a href="#hasExpertise"
+            title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+      </li>
+      <li>
+         <a href="#hasExternalProfile"
+            title="http://emmo.info/emmo/application/maeo/experts#hasExternalProfile">hasExternalProfile</a>
+      </li>
+      <li>
+         <a href="#hasProfile"
+            title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+      </li>
+      <li>
+         <a href="#hasRemuneration"
+            title="http://emmo.info/emmo/application/maeo/experts#hasRemuneration">hasRemuneration</a>
+      </li>
+      <li>
+         <a href="#isLocatedAt"
+            title="http://emmo.info/emmo/application/maeo/experts#isLocatedAt">isLocatedAt</a>
+      </li>
+      <li>
+         <a href="#issuedBy"
+            title="http://emmo.info/emmo/application/maeo/experts#issuedBy">issuedBy</a>
+      </li>
+      <li>
+         <a href="#isUnderContract"
+            title="http://emmo.info/emmo/application/maeo/experts#isUnderContract">isUnderContract</a>
+      </li>
+      <li>
+         <a href="#knowsLanguage"
+            title="http://emmo.info/emmo/application/maeo/experts#knowsLanguage">knowsLanguage</a>
+      </li>
+      <li>
+         <a href="#maeoObjectProperty"
+            title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+      </li>
+      <li>
+         <a href="#refersToOrganizationWithExpertise"
+            title="http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise">refersToOrganizationWithExpertise</a>
+      </li>
+      <li>
+         <a href="#requests"
+            title="http://emmo.info/emmo/application/maeo/experts#requests">requests</a>
+      </li>
+      <li>
+         <a href="#worksAt"
+            title="http://emmo.info/emmo/application/maeo/experts#worksAt">worksAt</a>
+      </li>
+   </ul>
+   <div class="entity" id="amountsTo">
+      <h3>amountsTo<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#amountsTo</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DailyRate"
+                  title="http://emmo.info/emmo/application/maeo/experts#DailyRate">Daily Rate</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Remuneration"
+                  title="http://emmo.info/emmo/application/maeo/experts#Remuneration">Remuneration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="expertiseOn">
+      <h3>expertiseOn<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#expertiseOn</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expertise"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCertification">
+      <h3>hasCertification<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#hasCertification</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Certification"
+                  title="http://emmo.info/emmo/application/maeo/experts#Certification">Certification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasExpertise">
+      <h3>hasExpertise<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#hasExpertise</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#KnowledgeProvider"
+                  title="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">Knowledge Provider</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Expertise"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasExternalProfile">
+      <h3>hasExternalProfile<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#hasExternalProfile</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ExternalProfile"
+                  title="http://emmo.info/emmo/application/maeo/experts#ExternalProfile">External Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasProfile">
+      <h3>hasProfile<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#hasProfile</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Profile"
+                  title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRemuneration">
+      <h3>hasRemuneration<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#hasRemuneration</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Contract"
+                  title="http://emmo.info/emmo/application/maeo/experts#Contract">Contract</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Remuneration"
+                  title="http://emmo.info/emmo/application/maeo/experts#Remuneration">Remuneration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isLocatedAt">
+      <h3>isLocatedAt<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#isLocatedAt</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExpertOrganization"
+                  title="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization">Expert Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Location"
+                  title="http://emmo.info/emmo/application/maeo/experts#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="issuedBy">
+      <h3>issuedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#issuedBy</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Certification"
+                  title="http://emmo.info/emmo/application/maeo/experts#Certification">Certification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CertificationAuthority"
+                  title="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority">Certification Authority</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isUnderContract">
+      <h3>isUnderContract<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#isUnderContract</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Contract"
+                  title="http://emmo.info/emmo/application/maeo/experts#Contract">Contract</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="knowsLanguage">
+      <h3>knowsLanguage<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#knowsLanguage</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Language"
+                  title="http://emmo.info/emmo/application/maeo/experts#Language">Language</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="maeoObjectProperty">
+      <h3>maeoObjectProperty<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204"
+                  target="_blank"
+                  title="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204">e m m o e1097637 70d2 4895 973f 2396f04fa204</a>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#amountsTo"
+                  title="http://emmo.info/emmo/application/maeo/experts#amountsTo">amountsTo</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#expertiseOn"
+                  title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasCertification"
+                  title="http://emmo.info/emmo/application/maeo/experts#hasCertification">hasCertification</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasExpertise"
+                  title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasExternalProfile"
+                  title="http://emmo.info/emmo/application/maeo/experts#hasExternalProfile">hasExternalProfile</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasProfile"
+                  title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasRemuneration"
+                  title="http://emmo.info/emmo/application/maeo/experts#hasRemuneration">hasRemuneration</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#isLocatedAt"
+                  title="http://emmo.info/emmo/application/maeo/experts#isLocatedAt">isLocatedAt</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#isUnderContract"
+                  title="http://emmo.info/emmo/application/maeo/experts#isUnderContract">isUnderContract</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#issuedBy"
+                  title="http://emmo.info/emmo/application/maeo/experts#issuedBy">issuedBy</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#knowsLanguage"
+                  title="http://emmo.info/emmo/application/maeo/experts#knowsLanguage">knowsLanguage</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#refersToOrganizationWithExpertise"
+                  title="http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise">refersToOrganizationWithExpertise</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#requests"
+                  title="http://emmo.info/emmo/application/maeo/experts#requests">requests</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#worksAt"
+                  title="http://emmo.info/emmo/application/maeo/experts#worksAt">worksAt</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="refersToOrganizationWithExpertise">
+      <h3>refersToOrganizationWithExpertise<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExpertOrganization"
+                  title="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization">Expert Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization"
+                  title="http://emmo.info/emmo/application/maeo/experts#Organization">Knowledge-providing Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="requests">
+      <h3>requests<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#requests</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DailyRate"
+                  title="http://emmo.info/emmo/application/maeo/experts#DailyRate">Daily Rate</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="worksAt">
+      <h3>worksAt<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#worksAt</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoObjectProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">maeoObjectProperty</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ExpertOrganization"
+                  title="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization">Expert Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#address"
+            title="http://emmo.info/emmo/application/maeo/experts#address">address</a>
+      </li>
+      <li>
+         <a href="#certificationAuthorityName"
+            title="http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName">certificationAuthorityName</a>
+      </li>
+      <li>
+         <a href="#certificationTitle"
+            title="http://emmo.info/emmo/application/maeo/experts#certificationTitle">certificationTitle</a>
+      </li>
+      <li>
+         <a href="#contractConstraint"
+            title="http://emmo.info/emmo/application/maeo/experts#contractConstraint">contractConstraint</a>
+      </li>
+      <li>
+         <a href="#contractType"
+            title="http://emmo.info/emmo/application/maeo/experts#contractType">contractType</a>
+      </li>
+      <li>
+         <a href="#experienceInYears"
+            title="http://emmo.info/emmo/application/maeo/experts#experienceInYears">experienceInYears</a>
+      </li>
+      <li>
+         <a href="#expirationDate"
+            title="http://emmo.info/emmo/application/maeo/experts#expirationDate">expirationDate</a>
+      </li>
+      <li>
+         <a href="#externalProfileName"
+            title="http://emmo.info/emmo/application/maeo/experts#externalProfileName">externalProfileName</a>
+      </li>
+      <li>
+         <a href="#externalProfileUrl"
+            title="http://emmo.info/emmo/application/maeo/experts#externalProfileUrl">externalProfileUrl</a>
+      </li>
+      <li>
+         <a href="#languageCode"
+            title="http://emmo.info/emmo/application/maeo/experts#languageCode">languageCode</a>
+      </li>
+      <li>
+         <a href="#languageLevel"
+            title="http://emmo.info/emmo/application/maeo/experts#languageLevel">languageLevel</a>
+      </li>
+      <li>
+         <a href="#languageName"
+            title="http://emmo.info/emmo/application/maeo/experts#languageName">languageName</a>
+      </li>
+      <li>
+         <a href="#languageType"
+            title="http://emmo.info/emmo/application/maeo/experts#languageType">languageType</a>
+      </li>
+      <li>
+         <a href="#maeoDatatypeProperty"
+            title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+      </li>
+      <li>
+         <a href="#profileAddress"
+            title="http://emmo.info/emmo/application/maeo/experts#profileAddress">profileAddress</a>
+      </li>
+      <li>
+         <a href="#profileEmail"
+            title="http://emmo.info/emmo/application/maeo/experts#profileEmail">profileEmail</a>
+      </li>
+      <li>
+         <a href="#profileName"
+            title="http://emmo.info/emmo/application/maeo/experts#profileName">profileName</a>
+      </li>
+      <li>
+         <a href="#profileUsername"
+            title="http://emmo.info/emmo/application/maeo/experts#profileUsername">profileUsername</a>
+      </li>
+      <li>
+         <a href="#remunerationCurrency"
+            title="http://emmo.info/emmo/application/maeo/experts#remunerationCurrency">remunerationCurrency</a>
+      </li>
+      <li>
+         <a href="#remunerationValue"
+            title="http://emmo.info/emmo/application/maeo/experts#remunerationValue">remunerationValue</a>
+      </li>
+      <li>
+         <a href="#yearsOnMarketPlace"
+            title="http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace">yearsOnMarketPlace</a>
+      </li>
+   </ul>
+   <div class="entity" id="address">
+      <h3>address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#address</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Location"
+                  title="http://emmo.info/emmo/application/maeo/experts#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="certificationAuthorityName">
+      <h3>certificationAuthorityName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CertificationAuthority"
+                  title="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority">Certification Authority</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="certificationTitle">
+      <h3>certificationTitle<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#certificationTitle</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Certification"
+                  title="http://emmo.info/emmo/application/maeo/experts#Certification">Certification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#date"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#date">date</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="contractConstraint">
+      <h3>contractConstraint<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#contractConstraint</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Contract"
+                  title="http://emmo.info/emmo/application/maeo/experts#Contract">Contract</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="contractType">
+      <h3>contractType<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#contractType</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Contract"
+                  title="http://emmo.info/emmo/application/maeo/experts#Contract">Contract</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="experienceInYears">
+      <h3>experienceInYears<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#experienceInYears</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="expirationDate">
+      <h3>expirationDate<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#expirationDate</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Certification"
+                  title="http://emmo.info/emmo/application/maeo/experts#Certification">Certification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#date"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#date">date</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="externalProfileName">
+      <h3>externalProfileName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#externalProfileName</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExternalProfile"
+                  title="http://emmo.info/emmo/application/maeo/experts#ExternalProfile">External Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="externalProfileUrl">
+      <h3>externalProfileUrl<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#externalProfileUrl</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ExternalProfile"
+                  title="http://emmo.info/emmo/application/maeo/experts#ExternalProfile">External Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="languageCode">
+      <h3>languageCode<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#languageCode</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Language"
+                  title="http://emmo.info/emmo/application/maeo/experts#Language">Language</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="languageLevel">
+      <h3>languageLevel<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#languageLevel</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">statement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="languageName">
+      <h3>languageName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#languageName</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Language"
+                  title="http://emmo.info/emmo/application/maeo/experts#Language">Language</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="languageType">
+      <h3>languageType<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#languageType</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">statement</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="maeoDatatypeProperty">
+      <h3>maeoDatatypeProperty<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#address"
+                  title="http://emmo.info/emmo/application/maeo/experts#address">address</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#certificationAuthorityName"
+                  title="http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName">certificationAuthorityName</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#certificationTitle"
+                  title="http://emmo.info/emmo/application/maeo/experts#certificationTitle">certificationTitle</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#contractConstraint"
+                  title="http://emmo.info/emmo/application/maeo/experts#contractConstraint">contractConstraint</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#contractType"
+                  title="http://emmo.info/emmo/application/maeo/experts#contractType">contractType</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#experienceInYears"
+                  title="http://emmo.info/emmo/application/maeo/experts#experienceInYears">experienceInYears</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#expirationDate"
+                  title="http://emmo.info/emmo/application/maeo/experts#expirationDate">expirationDate</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#externalProfileName"
+                  title="http://emmo.info/emmo/application/maeo/experts#externalProfileName">externalProfileName</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#externalProfileUrl"
+                  title="http://emmo.info/emmo/application/maeo/experts#externalProfileUrl">externalProfileUrl</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#languageCode"
+                  title="http://emmo.info/emmo/application/maeo/experts#languageCode">languageCode</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#languageLevel"
+                  title="http://emmo.info/emmo/application/maeo/experts#languageLevel">languageLevel</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#languageName"
+                  title="http://emmo.info/emmo/application/maeo/experts#languageName">languageName</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#languageType"
+                  title="http://emmo.info/emmo/application/maeo/experts#languageType">languageType</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#profileAddress"
+                  title="http://emmo.info/emmo/application/maeo/experts#profileAddress">profileAddress</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#profileEmail"
+                  title="http://emmo.info/emmo/application/maeo/experts#profileEmail">profileEmail</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#profileName"
+                  title="http://emmo.info/emmo/application/maeo/experts#profileName">profileName</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#profileUsername"
+                  title="http://emmo.info/emmo/application/maeo/experts#profileUsername">profileUsername</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#remunerationCurrency"
+                  title="http://emmo.info/emmo/application/maeo/experts#remunerationCurrency">remunerationCurrency</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#remunerationValue"
+                  title="http://emmo.info/emmo/application/maeo/experts#remunerationValue">remunerationValue</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#yearsOnMarketPlace"
+                  title="http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace">yearsOnMarketPlace</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="profileAddress">
+      <h3>profileAddress<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#profileAddress</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile"
+                  title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="profileEmail">
+      <h3>profileEmail<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#profileEmail</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile"
+                  title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="profileName">
+      <h3>profileName<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#profileName</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile"
+                  title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="profileUsername">
+      <h3>profileUsername<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#profileUsername</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Profile"
+                  title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="remunerationCurrency">
+      <h3>remunerationCurrency<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#remunerationCurrency</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Remuneration"
+                  title="http://emmo.info/emmo/application/maeo/experts#Remuneration">Remuneration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="remunerationValue">
+      <h3>remunerationValue<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#remunerationValue</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Remuneration"
+                  title="http://emmo.info/emmo/application/maeo/experts#Remuneration">Remuneration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="yearsOnMarketPlace">
+      <h3>yearsOnMarketPlace<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#maeoDatatypeProperty"
+                  title="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">maeoDatatypeProperty</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Expert"
+                  title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/ontology/bibo/status" title="http://purl.org/ontology/bibo/status">
+            <span>status</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/ontology/bibo/status">
+      <h3>status<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/bibo/status</p>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#DTEN"
+            title="http://emmo.info/emmo/application/maeo/experts#DTEN">
+            <span>d t e n</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DanieleToti"
+            title="http://emmo.info/emmo/application/maeo/experts#DanieleToti">
+            <span>daniele toti</span>
+         </a>
+      </li>
+      <li>
+         <a href="#English"
+            title="http://emmo.info/emmo/application/maeo/experts#English">
+            <span>english</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced"
+            title="http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced">
+            <span>epoxy matrix composite reinforced</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Expertise1"
+            title="http://emmo.info/emmo/application/maeo/experts#Expertise1">
+            <span>expertise1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Expertise2"
+            title="http://emmo.info/emmo/application/maeo/experts#Expertise2">
+            <span>expertise2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Expertise3"
+            title="http://emmo.info/emmo/application/maeo/experts#Expertise3">
+            <span>expertise3</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Expertise4"
+            title="http://emmo.info/emmo/application/maeo/experts#Expertise4">
+            <span>expertise4</span>
+         </a>
+      </li>
+      <li>
+         <a href="#GerhardGoldbeck"
+            title="http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck">
+            <span>gerhard goldbeck</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://emmo.info/emmo/domain/oie/software#Gromacs5.1"
+            title="http://emmo.info/emmo/domain/oie/software#Gromacs5.1">
+            <span>gromacs5.1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://emmo.info/emmo/domain/oie/software#MySQL8.0"
+            title="http://emmo.info/emmo/domain/oie/software#MySQL8.0">
+            <span>my s q l8.0</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PierluigiDelNostro"
+            title="http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro">
+            <span>pierluigi del nostro</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Profile1"
+            title="http://emmo.info/emmo/application/maeo/experts#Profile1">
+            <span>profile1</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Profile2"
+            title="http://emmo.info/emmo/application/maeo/experts#Profile2">
+            <span>profile2</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Profile3"
+            title="http://emmo.info/emmo/application/maeo/experts#Profile3">
+            <span>profile3</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="DTEN">
+      <h3>d t e n<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#DTEN</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+               target="_blank"
+               title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">statement</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#languageLevel"
+               title="http://emmo.info/emmo/application/maeo/experts#languageLevel">languageLevel</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"C2"</span>
+         </dd>
+         <dd>
+            <a href="#languageType"
+               title="http://emmo.info/emmo/application/maeo/experts#languageType">languageType</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Native/Bilingual"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DanieleToti">
+      <h3>daniele toti<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#DanieleToti</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Expert"
+               title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Expertise4"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise4">expertise4</a>
+         </dd>
+         <dd>
+            <a href="#hasProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Profile3"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile3">profile3</a>
+         </dd>
+         <dd>
+            <a href="#knowsLanguage"
+               title="http://emmo.info/emmo/application/maeo/experts#knowsLanguage">knowsLanguage</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#English"
+               title="http://emmo.info/emmo/application/maeo/experts#English">english</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="English">
+      <h3>english<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#English</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Language"
+               title="http://emmo.info/emmo/application/maeo/experts#Language">Language</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#languageCode"
+               title="http://emmo.info/emmo/application/maeo/experts#languageCode">languageCode</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"EN"</span>
+         </dd>
+         <dd>
+            <a href="#languageName"
+               title="http://emmo.info/emmo/application/maeo/experts#languageName">languageName</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"English"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced">
+      <h3>epoxy matrix composite reinforced<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://emmo.info/emmo/domain/oie/materials#FiberReinforcedComposite"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/materials#FiberReinforcedComposite">fiber reinforced composite</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Expertise1">
+      <h3>expertise1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Expertise1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Expertise"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://emmo.info/emmo/domain/oie/software#Gromacs5.1"
+               title="http://emmo.info/emmo/domain/oie/software#Gromacs5.1">gromacs5.1</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Expertise2">
+      <h3>expertise2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Expertise2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Expertise"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced"
+               title="http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced">epoxy matrix composite reinforced</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Expertise3">
+      <h3>expertise3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Expertise3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Expertise"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://emmo.info/emmo/domain/oie/software#Gromacs5.1"
+               title="http://emmo.info/emmo/domain/oie/software#Gromacs5.1">gromacs5.1</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Expertise4">
+      <h3>expertise4<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Expertise4</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Expertise"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise">Expertise</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#expertiseOn"
+               title="http://emmo.info/emmo/application/maeo/experts#expertiseOn">expertiseOn</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://emmo.info/emmo/domain/oie/software#MySQL8.0"
+               title="http://emmo.info/emmo/domain/oie/software#MySQL8.0">my s q l8.0</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GerhardGoldbeck">
+      <h3>gerhard goldbeck<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Expert"
+               title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Expertise2"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise2">expertise2</a>
+         </dd>
+         <dd>
+            <a href="#hasExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Expertise3"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise3">expertise3</a>
+         </dd>
+         <dd>
+            <a href="#hasProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Profile2"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile2">profile2</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://emmo.info/emmo/domain/oie/software#Gromacs5.1">
+      <h3>gromacs5.1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/domain/oie/software#Gromacs5.1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://emmo.info/emmo/domain/oie/software#Gromacs"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/software#Gromacs">gromacs</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://emmo.info/emmo/domain/oie/software#MySQL8.0">
+      <h3>my s q l8.0<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/domain/oie/software#MySQL8.0</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://emmo.info/emmo/domain/oie/software#Database"
+               target="_blank"
+               title="http://emmo.info/emmo/domain/oie/software#Database">database</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PierluigiDelNostro">
+      <h3>pierluigi del nostro<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Expert"
+               title="http://emmo.info/emmo/application/maeo/experts#Expert">Expert</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#hasExpertise"
+               title="http://emmo.info/emmo/application/maeo/experts#hasExpertise">hasExpertise</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Expertise1"
+               title="http://emmo.info/emmo/application/maeo/experts#Expertise1">expertise1</a>
+         </dd>
+         <dd>
+            <a href="#hasProfile"
+               title="http://emmo.info/emmo/application/maeo/experts#hasProfile">hasProfile</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#Profile1"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile1">profile1</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profile1">
+      <h3>profile1<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Profile1</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Profile"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#profileName"
+               title="http://emmo.info/emmo/application/maeo/experts#profileName">profileName</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Pierluigi Del Nostro"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profile2">
+      <h3>profile2<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Profile2</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Profile"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#profileName"
+               title="http://emmo.info/emmo/application/maeo/experts#profileName">profileName</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Gerhard Goldbeck"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profile3">
+      <h3>profile3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://emmo.info/emmo/application/maeo/experts#Profile3</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Profile"
+               title="http://emmo.info/emmo/application/maeo/experts#Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#profileName"
+               title="http://emmo.info/emmo/application/maeo/experts#profileName">profileName</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Daniele Toti"</span>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

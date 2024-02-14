@@ -1,0 +1,1369 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#expertiseOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/characterisation-methods#CharacterisationMethod"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#expertiseOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/manufacturing#Manufacturing"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#expertiseOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/materials#Material"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#expertiseOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/models#Model"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#expertiseOn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/software#Software"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Work under review - not available yet"
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Goldbeck Consulting Ltd (UK)"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2022-03-03"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Daniele Toti"
+  }, {
+    "@value" : "Gerhard Goldbeck"
+  }, {
+    "@value" : "Pierluigi Del Nostro"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "MAEO - MarketPlace Agent and Expert Ontology"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : ""
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@value" : "https://creativecommons.org/licenses/by/4.0/legalcode"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : ""
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "EMMC ASBL"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : ""
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "MAEO - MarketPlace Agent and Expert Ontology"
+  } ],
+  "http://purl.org/ontology/bibo/doi" : [ {
+    "@value" : ""
+  } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@value" : ""
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@language" : "en",
+    "@value" : "experts"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://emmo.info/emmo/application/maeo/experts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Contacts:\r\n\tGerhard Goldbeck\r\n\tGoldbeck Consulting Ltd (UK)\r\n\temail: gerhard@goldbeck-consulting.com"
+  } ],
+  "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://emmo.info/emmo/1.0.0-beta3/top"
+  }, {
+    "@id" : "http://emmo.info/emmo/1.0.0-beta3/middle/semiotics"
+  }, {
+    "@id" : "http://emmo.info/emmo/domain/oie/characterisation-methods"
+  }, {
+    "@id" : "http://emmo.info/emmo/domain/oie/manufacturing"
+  }, {
+    "@id" : "http://emmo.info/emmo/domain/oie/materials"
+  }, {
+    "@id" : "http://emmo.info/emmo/domain/oie/models"
+  }, {
+    "@id" : "http://emmo.info/emmo/domain/oie/software"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0-beta3"
+  } ],
+  "http://xmlns.com/foaf/0.1/logo" : [ {
+    "@value" : ""
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Certification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It describes an actual certification a human expert may possess, with datatype properties like certificationTitle and expirationDate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Certification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#CertificationDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Certification"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#CertificationAuthority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models the authority that has issued a certification."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Certification Authority"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#CertificationDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Certification Authority"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#CertificationDetail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is meant to describe the details of certifications possessed by a human expert."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Certification Detail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Certification Detail"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Competence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Competence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Competence"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Contract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is meant to model the actual contract(s) a given expert may be currently under. It includes datatype properties like contractType and contractConstraint, the latter modeling potential legal or business constraints and limitations a contract may specify with regard to potential consulting and collaboration activities an expert may be allowed to carry out."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ContractualDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Contract"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#ContractualDetail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It describes the details about the contract a human experts is currently under."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Contractual Detail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Contractual Detail"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#DTEN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#languageLevel" : [ {
+    "@value" : "C2"
+  } ],
+  "http://emmo.info/emmo/application/maeo/experts#languageType" : [ {
+    "@value" : "Native/Bilingual"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#DailyRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models the daily rate a human experts requests."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Daily Rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Daily Rate"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#DanieleToti",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#hasExpertise" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise4"
+  } ],
+  "http://emmo.info/emmo/application/maeo/experts#hasProfile" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile3"
+  } ],
+  "http://emmo.info/emmo/application/maeo/experts#knowsLanguage" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#English"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#English",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#languageCode" : [ {
+    "@value" : "EN"
+  } ],
+  "http://emmo.info/emmo/application/maeo/experts#languageName" : [ {
+    "@value" : "English"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Language"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A knowledge-providing human expert that possesses a certain expertise and whose information can be stored and accessed within the MarketPlace application. It sports datatype properties like experienceInYears and yearsOnMarketPlace, and it is the domain of several object properties."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Expert"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is meant to represent the superclass of all of the objective properties potentially possessed by the entities of the MAEO ontology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Expert Objective Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978"
+  }, {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Expert Objective Property"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models the organization an expert may be working at/with, distinguishing it from a knowledge-providing organization. An instance of the former may also be the same organization as an instance of the latter; in order to model such a case, the object property refersToOrganizationWithExpertise (domain: ExpertOrganization, range: Organization) has been introduced for connecting the two."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Expert Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Expert Organization"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is meant to represent the superclass of subjective properties that may be possessed by entities modeled in the MAEO ontology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Expert Subjective Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo#EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8"
+  }, {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Expert Subjective Property"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It represents the expertise possessed by a generic knowledge provider, by which users of the MarketPlace application can look for experts and such (and vice versa)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Expertise"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Expertise"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#expertiseOn" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/software#Gromacs5.1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#expertiseOn" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#expertiseOn" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/software#Gromacs5.1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#expertiseOn" : [ {
+    "@id" : "http://emmo.info/emmo/domain/oie/software#MySQL8.0"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#ExternalProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It represents a connection with an external profile for a given experts, e.g. a social network profile on LinkedIn, Facebook, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "External Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#PersonalDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "External Profile"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#hasExpertise" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise2"
+  }, {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise3"
+  } ],
+  "http://emmo.info/emmo/application/maeo/experts#hasProfile" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile2"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models a generic provider of knowledge that possesses a certain expertise."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Knowledge Provider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Knowledge Provider"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models a generic seeker of knowledge as a user of the MarketPlace application."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Knowledge Seeker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Knowledge Seeker"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Lab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a knowledge-providing laboratory."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Knowledge-providing Lab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Knowledge-providing Lab"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It describes a language known by a human expert. By reification (via the rdf:Statement construct), the datatype properties languageType and languageLevel are associated with a 'Expert knowsLanguage Language' triple."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Language"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It describes the physical address of an organization."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Location"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models a generic Agent in the MarketPlace, i.e. any entity (Knowledge Seeker, Knowledge Provider) that can act on the MarketPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MarketPlace Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "MarketPlace Agent"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This is the root class of the MAEO ontology, introduced for providing the ontology itself with a tree-like structure, with all of its other explicitly defined internal classes being subclasses of this class at various hierarchical levels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MarketPlace Agent and Expert Ontology"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "MarketPlace Agent and Expert Ontology"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A knowledge-providing juridical entity that possesses a certain expertise, and may or may not have something to do with Experts"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Knowledge-providing Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Knowledge-providing Organization"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is meant to model the details of the company, institution, organization an expert may be working at/with."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Organizational Detail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Organizational Detail"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#PersonalDetail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models the personal details (name, address, contacts, etc.) of a human expert."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Personal Detail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Personal Detail"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#hasExpertise" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise1"
+  } ],
+  "http://emmo.info/emmo/application/maeo/experts#hasProfile" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile1"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is meant to encompass the professional details of a human expert, e.g. title, role, qualifications, languages spoken, current or desired daily rate for hiring and its corresponding remuneration, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Professional Detail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Professional Detail"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It includes the details of a human expert's profile."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#PersonalDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Profile"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#profileName" : [ {
+    "@value" : "Pierluigi Del Nostro"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#profileName" : [ {
+    "@value" : "Gerhard Goldbeck"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://emmo.info/emmo/application/maeo/experts#profileName" : [ {
+    "@value" : "Daniele Toti"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Remuneration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It models the remuneration value and currency of the daily rate requested by a human expert, as well as the one associated with an existing contract a human expert may be under."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Remuneration"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#Team",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A knowledge-providing group of people."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Knowledge-providing Team"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Knowledge-providing Team"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#amountsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#DailyRate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "amountsTo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#CertificationAuthority"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "certificationAuthorityName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#certificationTitle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Certification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "certificationTitle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#contractConstraint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contractConstraint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#contractType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contractType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#experienceInYears",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "experienceInYears"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#expertiseOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "expertiseOn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#expirationDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Certification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "expirationDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#externalProfileName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExternalProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "externalProfileName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#externalProfileUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExternalProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "externalProfileUrl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#hasCertification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasCertification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Certification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#hasExpertise",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasExpertise"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expertise"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#hasExternalProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasExternalProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExternalProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#hasProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#hasRemuneration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasRemuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#isLocatedAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertOrganization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isLocatedAt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#isUnderContract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isUnderContract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Contract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#issuedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Certification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "issuedBy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#CertificationAuthority"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#knowsLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "knowsLanguage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#languageCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "languageCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#languageLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "languageLevel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#languageName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "languageName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#languageType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "languageType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maeoObjectProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#profileAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "profileAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#profileEmail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "profileEmail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#profileName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "profileName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#profileUsername",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "profileUsername"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertOrganization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "refersToOrganizationWithExpertise"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#remunerationCurrency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "remunerationCurrency"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#remunerationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Remuneration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "remunerationValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#requests",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "requests"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#DailyRate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#worksAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "worksAt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#ExpertOrganization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#Expert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "yearsOnMarketPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"
+  } ]
+}, {
+  "@id" : "http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://emmo.info/emmo/domain/oie/materials#FiberReinforcedComposite" ]
+}, {
+  "@id" : "http://emmo.info/emmo/domain/oie/software#Gromacs5.1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://emmo.info/emmo/domain/oie/software#Gromacs" ]
+}, {
+  "@id" : "http://emmo.info/emmo/domain/oie/software#MySQL8.0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://emmo.info/emmo/domain/oie/software#Database" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Agent",
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703"
+  } ]
+} ]

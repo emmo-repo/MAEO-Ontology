@@ -1,0 +1,1139 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://emmo.info/emmo/application/maeo/experts#"
+     xml:base="http://emmo.info/emmo/application/maeo/experts"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:emmo="http://emmo.info/emmo#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:emmo1="http://emmo.info/emmo#157"
+     xmlns:emmo2="http://emmo.info/emmo#58"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:experts="http://emmo.info/emmo/application/maeo/experts#">
+    <owl:Ontology rdf:about="http://emmo.info/emmo/application/maeo/experts">
+        <owl:versionIRI rdf:resource="http://emmo.info/emmo/application/maeo/experts"/>
+        <owl:imports rdf:resource="http://emmo.info/emmo/1.0.0-beta3/top"/>
+        <owl:imports rdf:resource="http://emmo.info/emmo/1.0.0-beta3/middle/semiotics"/>
+        <owl:imports rdf:resource="http://emmo.info/emmo/domain/oie/characterisation-methods"/>
+        <owl:imports rdf:resource="http://emmo.info/emmo/domain/oie/manufacturing"/>
+        <owl:imports rdf:resource="http://emmo.info/emmo/domain/oie/materials"/>
+        <owl:imports rdf:resource="http://emmo.info/emmo/domain/oie/models"/>
+        <owl:imports rdf:resource="http://emmo.info/emmo/domain/oie/software"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <terms:abstract xml:lang="en"></terms:abstract>
+        <terms:bibliographicCitation>Work under review - not available yet</terms:bibliographicCitation>
+        <terms:contributor>Goldbeck Consulting Ltd (UK)</terms:contributor>
+        <terms:created>2022-03-03</terms:created>
+        <terms:creator>Daniele Toti</terms:creator>
+        <terms:creator>Gerhard Goldbeck</terms:creator>
+        <terms:creator>Pierluigi Del Nostro</terms:creator>
+        <terms:description>MAEO - MarketPlace Agent and Expert Ontology</terms:description>
+        <terms:issued></terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/4.0/legalcode</terms:license>
+        <terms:modified></terms:modified>
+        <terms:publisher>EMMC ASBL</terms:publisher>
+        <terms:source></terms:source>
+        <terms:title xml:lang="en">MAEO - MarketPlace Agent and Expert Ontology</terms:title>
+        <bibo:doi></bibo:doi>
+        <bibo:status></bibo:status>
+        <vann:preferredNamespacePrefix xml:lang="en">experts</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://emmo.info/emmo/application/maeo/experts</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Contacts:
+	Gerhard Goldbeck
+	Goldbeck Consulting Ltd (UK)
+	email: gerhard@goldbeck-consulting.com</rdfs:comment>
+        <owl:backwardCompatibleWith></owl:backwardCompatibleWith>
+        <owl:priorVersion></owl:priorVersion>
+        <owl:versionInfo>1.0.0-beta3</owl:versionInfo>
+        <foaf:logo></foaf:logo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#amountsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#amountsTo">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#DailyRate"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Remuneration"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>amountsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#expertiseOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#expertiseOn">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>expertiseOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#hasCertification -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#hasCertification">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Certification"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>hasCertification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#hasExpertise -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#hasExpertise">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>hasExpertise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#hasExternalProfile -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#hasExternalProfile">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExternalProfile"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>hasExternalProfile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#hasProfile -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#hasProfile">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>hasProfile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#hasRemuneration -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#hasRemuneration">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Contract"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Remuneration"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>hasRemuneration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#isLocatedAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#isLocatedAt">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Location"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>isLocatedAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#isUnderContract -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#isUnderContract">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Contract"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>isUnderContract</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#issuedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#issuedBy">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Certification"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>issuedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#knowsLanguage -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#knowsLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Language"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>knowsLanguage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>maeoObjectProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#Organization"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>refersToOrganizationWithExpertise</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#requests -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#requests">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#DailyRate"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>requests</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#worksAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#worksAt">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>worksAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#address -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#address">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>certificationAuthorityName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#certificationTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#certificationTitle">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Certification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>certificationTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#contractConstraint -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#contractConstraint">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Contract"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>contractConstraint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#contractType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#contractType">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Contract"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>contractType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#experienceInYears -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#experienceInYears">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>experienceInYears</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#expirationDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#expirationDate">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Certification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>expirationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#externalProfileName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#externalProfileName">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExternalProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>externalProfileName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#externalProfileUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#externalProfileUrl">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExternalProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>externalProfileUrl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#languageCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#languageCode">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>languageCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#languageLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#languageLevel">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>languageLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#languageName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#languageName">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>languageName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#languageType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#languageType">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>languageType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty">
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>maeoDatatypeProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#profileAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#profileAddress">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>profileAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#profileEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#profileEmail">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>profileEmail</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#profileName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#profileName">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>profileName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#profileUsername -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#profileUsername">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>profileUsername</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#remunerationCurrency -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#remunerationCurrency">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Remuneration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>remunerationCurrency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#remunerationValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#remunerationValue">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Remuneration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>remunerationValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace -->
+
+
+    <owl:DatatypeProperty rdf:about="http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace">
+        <rdfs:subPropertyOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty"/>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>yearsOnMarketPlace</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Certification -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Certification">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#CertificationDetail"/>
+        <rdfs:comment>It describes an actual certification a human expert may possess, with datatype properties like certificationTitle and expirationDate.</rdfs:comment>
+        <rdfs:label>Certification</rdfs:label>
+        <skos:prefLabel xml:lang="en">Certification</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#CertificationAuthority -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#CertificationAuthority">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#CertificationDetail"/>
+        <rdfs:comment>It models the authority that has issued a certification.</rdfs:comment>
+        <rdfs:label>Certification Authority</rdfs:label>
+        <skos:prefLabel xml:lang="en">Certification Authority</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#CertificationDetail -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#CertificationDetail">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"/>
+        <rdfs:comment>It is meant to describe the details of certifications possessed by a human expert.</rdfs:comment>
+        <rdfs:label>Certification Detail</rdfs:label>
+        <skos:prefLabel xml:lang="en">Certification Detail</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Competence -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Competence">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://emmo.info/emmo/application/maeo/experts#expertiseOn"/>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/emmo/domain/oie/characterisation-methods#CharacterisationMethod"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://emmo.info/emmo/application/maeo/experts#expertiseOn"/>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/emmo/domain/oie/manufacturing#Manufacturing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://emmo.info/emmo/application/maeo/experts#expertiseOn"/>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/emmo/domain/oie/materials#Material"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://emmo.info/emmo/application/maeo/experts#expertiseOn"/>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/emmo/domain/oie/models#Model"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://emmo.info/emmo/application/maeo/experts#expertiseOn"/>
+                <owl:someValuesFrom rdf:resource="http://emmo.info/emmo/domain/oie/software#Software"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Competence</rdfs:label>
+        <skos:prefLabel xml:lang="en">Competence</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Contract -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Contract">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ContractualDetail"/>
+        <rdfs:comment>It is meant to model the actual contract(s) a given expert may be currently under. It includes datatype properties like contractType and contractConstraint, the latter modeling potential legal or business constraints and limitations a contract may specify with regard to potential consulting and collaboration activities an expert may be allowed to carry out.</rdfs:comment>
+        <rdfs:label>Contract</rdfs:label>
+        <skos:prefLabel xml:lang="en">Contract</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#ContractualDetail -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#ContractualDetail">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"/>
+        <rdfs:comment>It describes the details about the contract a human experts is currently under.</rdfs:comment>
+        <rdfs:label>Contractual Detail</rdfs:label>
+        <skos:prefLabel xml:lang="en">Contractual Detail</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#DailyRate -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#DailyRate">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail"/>
+        <rdfs:comment>It models the daily rate a human experts requests.</rdfs:comment>
+        <rdfs:label>Daily Rate</rdfs:label>
+        <skos:prefLabel xml:lang="en">Daily Rate</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Expert -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Expert">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>A knowledge-providing human expert that possesses a certain expertise and whose information can be stored and accessed within the MarketPlace application. It sports datatype properties like experienceInYears and yearsOnMarketPlace, and it is the domain of several object properties.</rdfs:comment>
+        <rdfs:label>Expert</rdfs:label>
+        <skos:prefLabel xml:lang="en">Expert</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978"/>
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"/>
+        <rdfs:comment>It is meant to represent the superclass of all of the objective properties potentially possessed by the entities of the MAEO ontology.</rdfs:comment>
+        <rdfs:label>Expert Objective Property</rdfs:label>
+        <skos:prefLabel xml:lang="en">Expert Objective Property</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#ExpertOrganization -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#ExpertOrganization">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail"/>
+        <rdfs:comment>It models the organization an expert may be working at/with, distinguishing it from a knowledge-providing organization. An instance of the former may also be the same organization as an instance of the latter; in order to model such a case, the object property refersToOrganizationWithExpertise (domain: ExpertOrganization, range: Organization) has been introduced for connecting the two.</rdfs:comment>
+        <rdfs:label>Expert Organization</rdfs:label>
+        <skos:prefLabel xml:lang="en">Expert Organization</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8"/>
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"/>
+        <rdfs:comment>It is meant to represent the superclass of subjective properties that may be possessed by entities modeled in the MAEO ontology.</rdfs:comment>
+        <rdfs:label>Expert Subjective Property</rdfs:label>
+        <skos:prefLabel xml:lang="en">Expert Subjective Property</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Expertise -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Expertise">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty"/>
+        <rdfs:comment>It represents the expertise possessed by a generic knowledge provider, by which users of the MarketPlace application can look for experts and such (and vice versa).</rdfs:comment>
+        <rdfs:label>Expertise</rdfs:label>
+        <skos:prefLabel xml:lang="en">Expertise</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#ExternalProfile -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#ExternalProfile">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#PersonalDetail"/>
+        <rdfs:comment>It represents a connection with an external profile for a given experts, e.g. a social network profile on LinkedIn, Facebook, etc.</rdfs:comment>
+        <rdfs:label>External Profile</rdfs:label>
+        <skos:prefLabel xml:lang="en">External Profile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent"/>
+        <rdfs:comment>It models a generic provider of knowledge that possesses a certain expertise.</rdfs:comment>
+        <rdfs:label>Knowledge Provider</rdfs:label>
+        <skos:prefLabel xml:lang="en">Knowledge Provider</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent"/>
+        <rdfs:comment>It models a generic seeker of knowledge as a user of the MarketPlace application.</rdfs:comment>
+        <rdfs:label>Knowledge Seeker</rdfs:label>
+        <skos:prefLabel xml:lang="en">Knowledge Seeker</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Lab -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Lab">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"/>
+        <rdfs:comment>a knowledge-providing laboratory.</rdfs:comment>
+        <rdfs:label>Knowledge-providing Lab</rdfs:label>
+        <skos:prefLabel xml:lang="en">Knowledge-providing Lab</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Language -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Language">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail"/>
+        <rdfs:comment>It describes a language known by a human expert. By reification (via the rdf:Statement construct), the datatype properties languageType and languageLevel are associated with a &apos;Expert knowsLanguage Language&apos; triple.</rdfs:comment>
+        <rdfs:label>Language</rdfs:label>
+        <skos:prefLabel xml:lang="en">Language</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Location -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Location">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail"/>
+        <rdfs:comment>It describes the physical address of an organization.</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+        <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>It models a generic Agent in the MarketPlace, i.e. any entity (Knowledge Seeker, Knowledge Provider) that can act on the MarketPlace</rdfs:comment>
+        <rdfs:label>MarketPlace Agent</rdfs:label>
+        <skos:prefLabel xml:lang="en">MarketPlace Agent</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology">
+        <rdfs:comment>This is the root class of the MAEO ontology, introduced for providing the ontology itself with a tree-like structure, with all of its other explicitly defined internal classes being subclasses of this class at various hierarchical levels.</rdfs:comment>
+        <rdfs:label>MarketPlace Agent and Expert Ontology</rdfs:label>
+        <skos:prefLabel xml:lang="en">MarketPlace Agent and Expert Ontology</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Organization -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Organization">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"/>
+        <rdfs:comment>A knowledge-providing juridical entity that possesses a certain expertise, and may or may not have something to do with Experts</rdfs:comment>
+        <rdfs:label>Knowledge-providing Organization</rdfs:label>
+        <skos:prefLabel xml:lang="en">Knowledge-providing Organization</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"/>
+        <rdfs:comment>It is meant to model the details of the company, institution, organization an expert may be working at/with.</rdfs:comment>
+        <rdfs:label>Organizational Detail</rdfs:label>
+        <skos:prefLabel xml:lang="en">Organizational Detail</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#PersonalDetail -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#PersonalDetail">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"/>
+        <rdfs:comment>It models the personal details (name, address, contacts, etc.) of a human expert.</rdfs:comment>
+        <rdfs:label>Personal Detail</rdfs:label>
+        <skos:prefLabel xml:lang="en">Personal Detail</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty"/>
+        <rdfs:comment>It is meant to encompass the professional details of a human expert, e.g. title, role, qualifications, languages spoken, current or desired daily rate for hiring and its corresponding remuneration, etc.</rdfs:comment>
+        <rdfs:label>Professional Detail</rdfs:label>
+        <skos:prefLabel xml:lang="en">Professional Detail</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Profile -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Profile">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#PersonalDetail"/>
+        <rdfs:comment>It includes the details of a human expert&apos;s profile.</rdfs:comment>
+        <rdfs:label>Profile</rdfs:label>
+        <skos:prefLabel xml:lang="en">Profile</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Remuneration -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Remuneration">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail"/>
+        <rdfs:comment>It models the remuneration value and currency of the daily rate requested by a human expert, as well as the one associated with an existing contract a human expert may be under.</rdfs:comment>
+        <rdfs:label>Remuneration</rdfs:label>
+        <skos:prefLabel xml:lang="en">Remuneration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Team -->
+
+
+    <owl:Class rdf:about="http://emmo.info/emmo/application/maeo/experts#Team">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider"/>
+        <rdfs:comment>A knowledge-providing group of people.</rdfs:comment>
+        <rdfs:label>Knowledge-providing Team</rdfs:label>
+        <skos:prefLabel xml:lang="en">Knowledge-providing Team</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:subClassOf rdf:resource="http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#DTEN -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#DTEN">
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <languageLevel>C2</languageLevel>
+        <languageType>Native/Bilingual</languageType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#DanieleToti -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#DanieleToti">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <hasExpertise rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise4"/>
+        <hasProfile rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile3"/>
+        <knowsLanguage rdf:resource="http://emmo.info/emmo/application/maeo/experts#English"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#English -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#English">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Language"/>
+        <languageCode>EN</languageCode>
+        <languageName>English</languageName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Expertise1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#Expertise1">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise"/>
+        <expertiseOn rdf:resource="http://emmo.info/emmo/domain/oie/software#Gromacs5.1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Expertise2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#Expertise2">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise"/>
+        <expertiseOn rdf:resource="http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Expertise3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#Expertise3">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise"/>
+        <expertiseOn rdf:resource="http://emmo.info/emmo/domain/oie/software#Gromacs5.1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Expertise4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#Expertise4">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise"/>
+        <expertiseOn rdf:resource="http://emmo.info/emmo/domain/oie/software#MySQL8.0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <hasExpertise rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise2"/>
+        <hasExpertise rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise3"/>
+        <hasProfile rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expert"/>
+        <hasExpertise rdf:resource="http://emmo.info/emmo/application/maeo/experts#Expertise1"/>
+        <hasProfile rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Profile1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#Profile1">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <profileName>Pierluigi Del Nostro</profileName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Profile2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#Profile2">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <profileName>Gerhard Goldbeck</profileName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/application/maeo/experts#Profile3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/application/maeo/experts#Profile3">
+        <rdf:type rdf:resource="http://emmo.info/emmo/application/maeo/experts#Profile"/>
+        <profileName>Daniele Toti</profileName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced">
+        <rdf:type rdf:resource="http://emmo.info/emmo/domain/oie/materials#FiberReinforcedComposite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/domain/oie/software#Gromacs5.1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/domain/oie/software#Gromacs5.1">
+        <rdf:type rdf:resource="http://emmo.info/emmo/domain/oie/software#Gromacs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://emmo.info/emmo/domain/oie/software#MySQL8.0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://emmo.info/emmo/domain/oie/software#MySQL8.0">
+        <rdf:type rdf:resource="http://emmo.info/emmo/domain/oie/software#Database"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/ -->
+
+

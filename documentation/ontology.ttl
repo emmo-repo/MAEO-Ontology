@@ -1,0 +1,737 @@
+@prefix : <http://emmo.info/emmo/application/maeo/experts#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://emmo.info/emmo/application/maeo/experts#> .
+
+<http://emmo.info/emmo/application/maeo/experts> rdf:type owl:Ontology ;
+                                                  owl:versionIRI <http://emmo.info/emmo/application/maeo/experts> ;
+                                                  owl:imports <http://emmo.info/emmo/1.0.0-beta3/top> ,
+                                                              <http://emmo.info/emmo/1.0.0-beta3/middle/semiotics> ,
+                                                              <http://emmo.info/emmo/domain/oie/characterisation-methods> ,
+                                                              <http://emmo.info/emmo/domain/oie/manufacturing> ,
+                                                              <http://emmo.info/emmo/domain/oie/materials> ,
+                                                              <http://emmo.info/emmo/domain/oie/models> ,
+                                                              <http://emmo.info/emmo/domain/oie/software> ,
+                                                              <http://xmlns.com/foaf/0.1/> ;
+                                                  <http://purl.org/dc/terms/abstract> ""@en ;
+                                                  <http://purl.org/dc/terms/bibliographicCitation> "Work under review - not available yet" ;
+                                                  <http://purl.org/dc/terms/contributor> "Goldbeck Consulting Ltd (UK)" ;
+                                                  <http://purl.org/dc/terms/created> "2022-03-03" ;
+                                                  <http://purl.org/dc/terms/creator> "Daniele Toti" ,
+                                                                                     "Gerhard Goldbeck" ,
+                                                                                     "Pierluigi Del Nostro" ;
+                                                  <http://purl.org/dc/terms/description> "MAEO - MarketPlace Agent and Expert Ontology" ;
+                                                  <http://purl.org/dc/terms/issued> "" ;
+                                                  <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode" ;
+                                                  <http://purl.org/dc/terms/modified> "" ;
+                                                  <http://purl.org/dc/terms/publisher> "EMMC ASBL" ;
+                                                  <http://purl.org/dc/terms/source> "" ;
+                                                  <http://purl.org/dc/terms/title> "MAEO - MarketPlace Agent and Expert Ontology"@en ;
+                                                  <http://purl.org/ontology/bibo/doi> "" ;
+                                                  <http://purl.org/ontology/bibo/status> "" ;
+                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "experts"@en ;
+                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "http://emmo.info/emmo/application/maeo/experts" ;
+                                                  rdfs:comment """Contacts:
+	Gerhard Goldbeck
+	Goldbeck Consulting Ltd (UK)
+	email: gerhard@goldbeck-consulting.com"""@en ;
+                                                  owl:backwardCompatibleWith "" ;
+                                                  owl:priorVersion "" ;
+                                                  owl:versionInfo "1.0.0-beta3" ;
+                                                  <http://xmlns.com/foaf/0.1/logo> "" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://emmo.info/emmo/application/maeo/experts#amountsTo
+:amountsTo rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :maeoObjectProperty ;
+           rdfs:domain :DailyRate ;
+           rdfs:range :Remuneration ;
+           rdfs:comment "" ;
+           rdfs:label "amountsTo" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#expertiseOn
+:expertiseOn rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :maeoObjectProperty ;
+             rdfs:domain :Expertise ;
+             rdfs:comment "" ;
+             rdfs:label "expertiseOn" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#hasCertification
+:hasCertification rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :maeoObjectProperty ;
+                  rdfs:domain :Expert ;
+                  rdfs:range :Certification ;
+                  rdfs:comment "" ;
+                  rdfs:label "hasCertification" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#hasExpertise
+:hasExpertise rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :maeoObjectProperty ;
+              rdfs:domain :KnowledgeProvider ;
+              rdfs:range :Expertise ;
+              rdfs:comment "" ;
+              rdfs:label "hasExpertise" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#hasExternalProfile
+:hasExternalProfile rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :maeoObjectProperty ;
+                    rdfs:domain :Expert ;
+                    rdfs:range :ExternalProfile ;
+                    rdfs:comment "" ;
+                    rdfs:label "hasExternalProfile" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#hasProfile
+:hasProfile rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :maeoObjectProperty ;
+            rdfs:domain :Expert ;
+            rdfs:range :Profile ;
+            rdfs:comment "" ;
+            rdfs:label "hasProfile" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#hasRemuneration
+:hasRemuneration rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :maeoObjectProperty ;
+                 rdfs:domain :Contract ;
+                 rdfs:range :Remuneration ;
+                 rdfs:comment "" ;
+                 rdfs:label "hasRemuneration" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#isLocatedAt
+:isLocatedAt rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :maeoObjectProperty ;
+             rdfs:domain :ExpertOrganization ;
+             rdfs:range :Location ;
+             rdfs:comment "" ;
+             rdfs:label "isLocatedAt" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#isUnderContract
+:isUnderContract rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :maeoObjectProperty ;
+                 rdfs:domain :Expert ;
+                 rdfs:range :Contract ;
+                 rdfs:comment "" ;
+                 rdfs:label "isUnderContract" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#issuedBy
+:issuedBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :maeoObjectProperty ;
+          rdfs:domain :Certification ;
+          rdfs:range :CertificationAuthority ;
+          rdfs:comment "" ;
+          rdfs:label "issuedBy" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#knowsLanguage
+:knowsLanguage rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :maeoObjectProperty ;
+               rdfs:domain :Expert ;
+               rdfs:range :Language ;
+               rdfs:comment "" ;
+               rdfs:label "knowsLanguage" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#maeoObjectProperty
+:maeoObjectProperty rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://emmo.info/emmo#EMMO_e1097637_70d2_4895_973f_2396f04fa204> ;
+                    rdfs:comment "" ;
+                    rdfs:label "maeoObjectProperty" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#refersToOrganizationWithExpertise
+:refersToOrganizationWithExpertise rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :maeoObjectProperty ;
+                                   rdfs:domain :ExpertOrganization ;
+                                   rdfs:range :Organization ;
+                                   rdfs:comment "" ;
+                                   rdfs:label "refersToOrganizationWithExpertise" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#requests
+:requests rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :maeoObjectProperty ;
+          rdfs:domain :Expert ;
+          rdfs:range :DailyRate ;
+          rdfs:comment "" ;
+          rdfs:label "requests" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#worksAt
+:worksAt rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :maeoObjectProperty ;
+         rdfs:domain :Expert ;
+         rdfs:range :ExpertOrganization ;
+         rdfs:comment "" ;
+         rdfs:label "worksAt" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://emmo.info/emmo/application/maeo/experts#address
+:address rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :maeoDatatypeProperty ;
+         rdfs:domain :Location ;
+         rdfs:range xsd:string ;
+         rdfs:comment "" ;
+         rdfs:label "address" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#certificationAuthorityName
+:certificationAuthorityName rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf :maeoDatatypeProperty ;
+                            rdfs:domain :CertificationAuthority ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "" ;
+                            rdfs:label "certificationAuthorityName" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#certificationTitle
+:certificationTitle rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :maeoDatatypeProperty ;
+                    rdfs:domain :Certification ;
+                    rdfs:range xsd:date ;
+                    rdfs:comment "" ;
+                    rdfs:label "certificationTitle" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#contractConstraint
+:contractConstraint rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :maeoDatatypeProperty ;
+                    rdfs:domain :Contract ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "" ;
+                    rdfs:label "contractConstraint" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#contractType
+:contractType rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :maeoDatatypeProperty ;
+              rdfs:domain :Contract ;
+              rdfs:range xsd:string ;
+              rdfs:comment "" ;
+              rdfs:label "contractType" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#experienceInYears
+:experienceInYears rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :maeoDatatypeProperty ;
+                   rdfs:domain :Expert ;
+                   rdfs:range xsd:double ;
+                   rdfs:comment "" ;
+                   rdfs:label "experienceInYears" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#expirationDate
+:expirationDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :maeoDatatypeProperty ;
+                rdfs:domain :Certification ;
+                rdfs:range xsd:date ;
+                rdfs:comment "" ;
+                rdfs:label "expirationDate" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#externalProfileName
+:externalProfileName rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :maeoDatatypeProperty ;
+                     rdfs:domain :ExternalProfile ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "" ;
+                     rdfs:label "externalProfileName" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#externalProfileUrl
+:externalProfileUrl rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :maeoDatatypeProperty ;
+                    rdfs:domain :ExternalProfile ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "" ;
+                    rdfs:label "externalProfileUrl" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#languageCode
+:languageCode rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :maeoDatatypeProperty ;
+              rdfs:domain :Language ;
+              rdfs:range xsd:string ;
+              rdfs:comment "" ;
+              rdfs:label "languageCode" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#languageLevel
+:languageLevel rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :maeoDatatypeProperty ;
+               rdfs:domain rdf:Statement ;
+               rdfs:range xsd:string ;
+               rdfs:comment "" ;
+               rdfs:label "languageLevel" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#languageName
+:languageName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :maeoDatatypeProperty ;
+              rdfs:domain :Language ;
+              rdfs:range xsd:string ;
+              rdfs:comment "" ;
+              rdfs:label "languageName" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#languageType
+:languageType rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :maeoDatatypeProperty ;
+              rdfs:domain rdf:Statement ;
+              rdfs:range xsd:string ;
+              rdfs:comment "" ;
+              rdfs:label "languageType" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#maeoDatatypeProperty
+:maeoDatatypeProperty rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "" ;
+                      rdfs:label "maeoDatatypeProperty" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#profileAddress
+:profileAddress rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :maeoDatatypeProperty ;
+                rdfs:domain :Profile ;
+                rdfs:range xsd:string ;
+                rdfs:comment "" ;
+                rdfs:label "profileAddress" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#profileEmail
+:profileEmail rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :maeoDatatypeProperty ;
+              rdfs:domain :Profile ;
+              rdfs:range xsd:string ;
+              rdfs:comment "" ;
+              rdfs:label "profileEmail" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#profileName
+:profileName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :maeoDatatypeProperty ;
+             rdfs:domain :Profile ;
+             rdfs:range xsd:string ;
+             rdfs:comment "" ;
+             rdfs:label "profileName" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#profileUsername
+:profileUsername rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :maeoDatatypeProperty ;
+                 rdfs:domain :Profile ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "" ;
+                 rdfs:label "profileUsername" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#remunerationCurrency
+:remunerationCurrency rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :maeoDatatypeProperty ;
+                      rdfs:domain :Remuneration ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "" ;
+                      rdfs:label "remunerationCurrency" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#remunerationValue
+:remunerationValue rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :maeoDatatypeProperty ;
+                   rdfs:domain :Remuneration ;
+                   rdfs:range xsd:double ;
+                   rdfs:comment "" ;
+                   rdfs:label "remunerationValue" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#yearsOnMarketPlace
+:yearsOnMarketPlace rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :maeoDatatypeProperty ;
+                    rdfs:domain :Expert ;
+                    rdfs:range xsd:double ;
+                    rdfs:comment "" ;
+                    rdfs:label "yearsOnMarketPlace" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://emmo.info/emmo/application/maeo/experts#Certification
+:Certification rdf:type owl:Class ;
+               rdfs:subClassOf :CertificationDetail ;
+               rdfs:comment "It describes an actual certification a human expert may possess, with datatype properties like certificationTitle and expirationDate." ;
+               rdfs:label "Certification" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Certification"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#CertificationAuthority
+:CertificationAuthority rdf:type owl:Class ;
+                        rdfs:subClassOf :CertificationDetail ;
+                        rdfs:comment "It models the authority that has issued a certification." ;
+                        rdfs:label "Certification Authority" ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Certification Authority"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#CertificationDetail
+:CertificationDetail rdf:type owl:Class ;
+                     rdfs:subClassOf :ExpertObjectiveProperty ;
+                     rdfs:comment "It is meant to describe the details of certifications possessed by a human expert." ;
+                     rdfs:label "Certification Detail" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Certification Detail"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Competence
+:Competence rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :expertiseOn ;
+                                  owl:someValuesFrom <http://emmo.info/emmo/domain/oie/characterisation-methods#CharacterisationMethod>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :expertiseOn ;
+                                  owl:someValuesFrom <http://emmo.info/emmo/domain/oie/manufacturing#Manufacturing>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :expertiseOn ;
+                                  owl:someValuesFrom <http://emmo.info/emmo/domain/oie/materials#Material>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :expertiseOn ;
+                                  owl:someValuesFrom <http://emmo.info/emmo/domain/oie/models#Model>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :expertiseOn ;
+                                  owl:someValuesFrom <http://emmo.info/emmo/domain/oie/software#Software>
+                                ] ;
+            rdfs:subClassOf :MarketPlaceAgentExpertOntology ;
+            rdfs:comment "" ;
+            rdfs:label "Competence" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Competence"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Contract
+:Contract rdf:type owl:Class ;
+          rdfs:subClassOf :ContractualDetail ;
+          rdfs:comment "It is meant to model the actual contract(s) a given expert may be currently under. It includes datatype properties like contractType and contractConstraint, the latter modeling potential legal or business constraints and limitations a contract may specify with regard to potential consulting and collaboration activities an expert may be allowed to carry out." ;
+          rdfs:label "Contract" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#ContractualDetail
+:ContractualDetail rdf:type owl:Class ;
+                   rdfs:subClassOf :ExpertObjectiveProperty ;
+                   rdfs:comment "It describes the details about the contract a human experts is currently under." ;
+                   rdfs:label "Contractual Detail" ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Contractual Detail"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#DailyRate
+:DailyRate rdf:type owl:Class ;
+           rdfs:subClassOf :ProfessionalDetail ;
+           rdfs:comment "It models the daily rate a human experts requests." ;
+           rdfs:label "Daily Rate" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Daily Rate"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Expert
+:Expert rdf:type owl:Class ;
+        rdfs:subClassOf :KnowledgeProvider ,
+                        <http://xmlns.com/foaf/0.1/Person> ;
+        rdfs:comment "A knowledge-providing human expert that possesses a certain expertise and whose information can be stored and accessed within the MarketPlace application. It sports datatype properties like experienceInYears and yearsOnMarketPlace, and it is the domain of several object properties." ;
+        rdfs:label "Expert" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#ExpertObjectiveProperty
+:ExpertObjectiveProperty rdf:type owl:Class ;
+                         rdfs:subClassOf <http://emmo.info/emmo#EMMO_2a888cdf_ec4a_4ec5_af1c_0343372fc978> ,
+                                         :MarketPlaceAgentExpertOntology ;
+                         rdfs:comment "It is meant to represent the superclass of all of the objective properties potentially possessed by the entities of the MAEO ontology." ;
+                         rdfs:label "Expert Objective Property" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert Objective Property"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#ExpertOrganization
+:ExpertOrganization rdf:type owl:Class ;
+                    rdfs:subClassOf :OrganizationalDetail ;
+                    rdfs:comment "It models the organization an expert may be working at/with, distinguishing it from a knowledge-providing organization. An instance of the former may also be the same organization as an instance of the latter; in order to model such a case, the object property refersToOrganizationWithExpertise (domain: ExpertOrganization, range: Organization) has been introduced for connecting the two." ;
+                    rdfs:label "Expert Organization" ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert Organization"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#ExpertSubjectiveProperty
+:ExpertSubjectiveProperty rdf:type owl:Class ;
+                          rdfs:subClassOf <http://emmo.info/emmo#EMMO_251cfb4f_5c75_4778_91ed_6c8395212fd8> ,
+                                          :MarketPlaceAgentExpertOntology ;
+                          rdfs:comment "It is meant to represent the superclass of subjective properties that may be possessed by entities modeled in the MAEO ontology." ;
+                          rdfs:label "Expert Subjective Property" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Expert Subjective Property"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Expertise
+:Expertise rdf:type owl:Class ;
+           rdfs:subClassOf :ExpertSubjectiveProperty ;
+           rdfs:comment "It represents the expertise possessed by a generic knowledge provider, by which users of the MarketPlace application can look for experts and such (and vice versa)." ;
+           rdfs:label "Expertise" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Expertise"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#ExternalProfile
+:ExternalProfile rdf:type owl:Class ;
+                 rdfs:subClassOf :PersonalDetail ;
+                 rdfs:comment "It represents a connection with an external profile for a given experts, e.g. a social network profile on LinkedIn, Facebook, etc." ;
+                 rdfs:label "External Profile" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "External Profile"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#KnowledgeProvider
+:KnowledgeProvider rdf:type owl:Class ;
+                   rdfs:subClassOf :MarketPlaceAgent ;
+                   rdfs:comment "It models a generic provider of knowledge that possesses a certain expertise." ;
+                   rdfs:label "Knowledge Provider" ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge Provider"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#KnowledgeSeeker
+:KnowledgeSeeker rdf:type owl:Class ;
+                 rdfs:subClassOf :MarketPlaceAgent ;
+                 rdfs:comment "It models a generic seeker of knowledge as a user of the MarketPlace application." ;
+                 rdfs:label "Knowledge Seeker" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge Seeker"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Lab
+:Lab rdf:type owl:Class ;
+     rdfs:subClassOf :KnowledgeProvider ;
+     rdfs:comment "a knowledge-providing laboratory." ;
+     rdfs:label "Knowledge-providing Lab" ;
+     <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge-providing Lab"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Language
+:Language rdf:type owl:Class ;
+          rdfs:subClassOf :ProfessionalDetail ;
+          rdfs:comment "It describes a language known by a human expert. By reification (via the rdf:Statement construct), the datatype properties languageType and languageLevel are associated with a 'Expert knowsLanguage Language' triple." ;
+          rdfs:label "Language" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Language"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf :OrganizationalDetail ;
+          rdfs:comment "It describes the physical address of an organization." ;
+          rdfs:label "Location" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgent
+:MarketPlaceAgent rdf:type owl:Class ;
+                  rdfs:subClassOf :MarketPlaceAgentExpertOntology ,
+                                  <http://xmlns.com/foaf/0.1/Agent> ;
+                  rdfs:comment "It models a generic Agent in the MarketPlace, i.e. any entity (Knowledge Seeker, Knowledge Provider) that can act on the MarketPlace" ;
+                  rdfs:label "MarketPlace Agent" ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "MarketPlace Agent"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#MarketPlaceAgentExpertOntology
+:MarketPlaceAgentExpertOntology rdf:type owl:Class ;
+                                rdfs:comment "This is the root class of the MAEO ontology, introduced for providing the ontology itself with a tree-like structure, with all of its other explicitly defined internal classes being subclasses of this class at various hierarchical levels." ;
+                                rdfs:label "MarketPlace Agent and Expert Ontology" ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "MarketPlace Agent and Expert Ontology"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Organization
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :KnowledgeProvider ;
+              rdfs:comment "A knowledge-providing juridical entity that possesses a certain expertise, and may or may not have something to do with Experts" ;
+              rdfs:label "Knowledge-providing Organization" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge-providing Organization"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#OrganizationalDetail
+:OrganizationalDetail rdf:type owl:Class ;
+                      rdfs:subClassOf :ExpertObjectiveProperty ;
+                      rdfs:comment "It is meant to model the details of the company, institution, organization an expert may be working at/with." ;
+                      rdfs:label "Organizational Detail" ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Organizational Detail"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#PersonalDetail
+:PersonalDetail rdf:type owl:Class ;
+                rdfs:subClassOf :ExpertObjectiveProperty ;
+                rdfs:comment "It models the personal details (name, address, contacts, etc.) of a human expert." ;
+                rdfs:label "Personal Detail" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal Detail"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#ProfessionalDetail
+:ProfessionalDetail rdf:type owl:Class ;
+                    rdfs:subClassOf :ExpertObjectiveProperty ;
+                    rdfs:comment "It is meant to encompass the professional details of a human expert, e.g. title, role, qualifications, languages spoken, current or desired daily rate for hiring and its corresponding remuneration, etc." ;
+                    rdfs:label "Professional Detail" ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional Detail"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Profile
+:Profile rdf:type owl:Class ;
+         rdfs:subClassOf :PersonalDetail ;
+         rdfs:comment "It includes the details of a human expert's profile." ;
+         rdfs:label "Profile" ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "Profile"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Remuneration
+:Remuneration rdf:type owl:Class ;
+              rdfs:subClassOf :ProfessionalDetail ;
+              rdfs:comment "It models the remuneration value and currency of the daily rate requested by a human expert, as well as the one associated with an existing contract a human expert may be under." ;
+              rdfs:label "Remuneration" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Remuneration"@en .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Team
+:Team rdf:type owl:Class ;
+      rdfs:subClassOf :KnowledgeProvider ;
+      rdfs:comment "A knowledge-providing group of people." ;
+      rdfs:label "Knowledge-providing Team" ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge-providing Team"@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+rdf:Statement rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdfs:subClassOf <http://emmo.info/emmo#EMMO_13191289_6c2b_4741_93e1_82d53bd0e703> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://emmo.info/emmo/application/maeo/experts#DTEN
+:DTEN rdf:type owl:NamedIndividual ,
+               rdf:Statement ;
+      :languageLevel "C2" ;
+      :languageType "Native/Bilingual" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#DanieleToti
+:DanieleToti rdf:type owl:NamedIndividual ,
+                      :Expert ;
+             :hasExpertise :Expertise4 ;
+             :hasProfile :Profile3 ;
+             :knowsLanguage :English .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#English
+:English rdf:type owl:NamedIndividual ,
+                  :Language ;
+         :languageCode "EN" ;
+         :languageName "English" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Expertise1
+:Expertise1 rdf:type owl:NamedIndividual ,
+                     :Expertise ;
+            :expertiseOn <http://emmo.info/emmo/domain/oie/software#Gromacs5.1> .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Expertise2
+:Expertise2 rdf:type owl:NamedIndividual ,
+                     :Expertise ;
+            :expertiseOn <http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced> .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Expertise3
+:Expertise3 rdf:type owl:NamedIndividual ,
+                     :Expertise ;
+            :expertiseOn <http://emmo.info/emmo/domain/oie/software#Gromacs5.1> .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Expertise4
+:Expertise4 rdf:type owl:NamedIndividual ,
+                     :Expertise ;
+            :expertiseOn <http://emmo.info/emmo/domain/oie/software#MySQL8.0> .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#GerhardGoldbeck
+:GerhardGoldbeck rdf:type owl:NamedIndividual ,
+                          :Expert ;
+                 :hasExpertise :Expertise2 ,
+                               :Expertise3 ;
+                 :hasProfile :Profile2 .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#PierluigiDelNostro
+:PierluigiDelNostro rdf:type owl:NamedIndividual ,
+                             :Expert ;
+                    :hasExpertise :Expertise1 ;
+                    :hasProfile :Profile1 .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Profile1
+:Profile1 rdf:type owl:NamedIndividual ,
+                   :Profile ;
+          :profileName "Pierluigi Del Nostro" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Profile2
+:Profile2 rdf:type owl:NamedIndividual ,
+                   :Profile ;
+          :profileName "Gerhard Goldbeck" .
+
+
+###  http://emmo.info/emmo/application/maeo/experts#Profile3
+:Profile3 rdf:type owl:NamedIndividual ,
+                   :Profile ;
+          :profileName "Daniele Toti" .
+
+
+###  http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced
+<http://emmo.info/emmo/domain/oie/materials#EpoxyMatrixCompositeReinforced> rdf:type owl:NamedIndividual ,
+                                                                                     <http://emmo.info/emmo/domain/oie/materials#FiberReinforcedComposite> .
+
+
+###  http://emmo.info/emmo/domain/oie/software#Gromacs5.1
+<http://emmo.info/emmo/domain/oie/software#Gromacs5.1> rdf:type owl:NamedIndividual ,
+                                                                <http://emmo.info/emmo/domain/oie/software#Gromacs> .
+
+
+###  http://emmo.info/emmo/domain/oie/software#MySQL8.0
+<http://emmo.info/emmo/domain/oie/software#MySQL8.0> rdf:type owl:NamedIndividual ,
+                                                              <http://emmo.info/emmo/domain/oie/software#Database> .
+
+
+###  Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/
