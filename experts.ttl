@@ -27,11 +27,9 @@
 				<http://emmo.info/emmo/domain/oie/software> ;
 	dcterms:abstract ""@en ;
 	dcterms:bibliographicCitation "Work under review - not available yet" ;
-	dcterms:contributor "Goldbeck Consulting Ltd (UK)" ;
+	dcterms:contributor <https://orcid.org/0000-0002-9668-6961>, <https://orcid.org/0000-0002-5174-8508>, <https://orcid.org/0000-0002-4181-2852> ;
+	dcterms:creator <https://orcid.org/0000-0002-9668-6961>, <https://orcid.org/0000-0002-5174-8508>, <https://orcid.org/0000-0002-4181-2852> ;
 	dcterms:created "2022-03-03" ;
-	dcterms:creator "Daniele Toti" ,
-	"Pierluigi Del Nostro" ,
-	"Gerhard Goldbeck" ;
 	dcterms:description "MAEO - MarketPlace Agent and Expert Ontology" ;
 	dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
 	dcterms:publisher "EMMC ASBL" ;
@@ -52,6 +50,23 @@
 	<http://purl.org/ontology/bibo/doi> "" ;
 	owl:versionInfo "1.0.0-beta3" .
 	
+<https://orcid.org/0000-0002-9668-6961> a foaf:Person ;
+	rdfs:label "Daniele Toti" ;
+	skos:prefLabel "Daniele Toti" ;
+	foaf:name "Daniele Toti" ;
+	rdfs:comment "" .
+	
+<https://orcid.org/0000-0002-5174-8508> a foaf:Person ;
+	rdfs:label "Pierluigi Del Nostro" ;
+	skos:prefLabel "Pierluigi Del Nostro" ;
+	foaf:name "Pierluigi Del Nostro" ;
+	rdfs:comment "" .
+	
+<https://orcid.org/0000-0002-4181-2852> a foaf:Person ;
+	rdfs:label "Gerhard Goldbeck" ;
+	skos:prefLabel "Gerhard Goldbeck" ;
+	foaf:name "Gerhard Goldbeck" ;
+	rdfs:comment "" .	
 
 ####### EMMO mapping:
 ### Participant                   -> middle-persholistic   emmo:EMMO_13191289_6c2b_4741_93e1_82d53bd0e703
