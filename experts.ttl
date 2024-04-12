@@ -25,18 +25,18 @@
 				<http://emmo.info/emmo/domain/oie/materials> ,
 				<http://emmo.info/emmo/domain/oie/models> ,
 				<http://emmo.info/emmo/domain/oie/software> ;
-	dcterms:abstract ""@en ;
-	dcterms:bibliographicCitation "Work under review - not available yet" ;
+	dcterms:abstract "The MarketPlace Agent and Expert Ontology (MAEO) is an ontology for modeling experts, expertise, and more broadly, knowledge providers and knowledge seekers for the subject areas of Materials Modeling."@en ;
+	dcterms:bibliographicCitation "Del Nostro, P., Goldbeck, G., Pozzi, A., Toti, D., 2023. Modeling experts, knowledge providers and expertise in Materials Modeling:MAEO as an application ontology of EMMO's ecosystem. Applied Ontology 18, 99–118. doi:10.3233/AO-230024." ;
 	dcterms:contributor <https://orcid.org/0000-0002-9668-6961>, <https://orcid.org/0000-0002-5174-8508>, <https://orcid.org/0000-0002-4181-2852> ;
 	dcterms:creator <https://orcid.org/0000-0002-9668-6961>, <https://orcid.org/0000-0002-5174-8508>, <https://orcid.org/0000-0002-4181-2852> ;
-	dcterms:created "2022-03-03" ;
-	dcterms:description "MAEO - MarketPlace Agent and Expert Ontology" ;
+	dcterms:created "2020-05-05" ;
+	dcterms:description "The MarketPlace Agent and Expert Ontology (MAEO) is an ontology for modeling experts, expertise, and more broadly, knowledge providers and knowledge seekers for the subject areas of Materials Modeling. MAEO is an EMMO-compliant application ontology, and has been loosely aligned with a number of existing ontologies, including Friend-Of-A-Friend (FOAF) and five recently-developed EMMO-based domain ontologies for the classification of materials, models, manufacturing processes, characterization methods and software products related to Materials Modeling."@en ;
 	dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
 	dcterms:publisher "EMMC ASBL" ;
 	dcterms:title "MAEO - MarketPlace Agent and Expert Ontology"@en ;
-	dcterms:modified "" ;
+	dcterms:modified "2024-04-12" ;
 	dcterms:source "" ;
-	dcterms:issued "" ;
+	dcterms:issued "2024-04-12" ;
 	<http://purl.org/vocab/vann/preferredNamespacePrefix> "experts"@en ;
 	<http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/emmo-maeo/maeo" ;
 	rdfs:comment """Contacts:
